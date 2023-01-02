@@ -1,7 +1,7 @@
 // import 'dart:async';
 
-// import 'package:calculator_flutter_app/common/widgets/back_button_widget.dart';
-// import 'package:calculator_flutter_app/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';
+// import 'package:diesel_powered/common/widgets/back_button_widget.dart';
+// import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';

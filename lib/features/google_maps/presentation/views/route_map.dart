@@ -2,13 +2,13 @@
 // import 'dart:typed_data';
 // import 'dart:ui' as ui;
 
-// import 'package:calculator_flutter_app/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';
-// import 'package:calculator_flutter_app/features/google_maps/presentation/providers/request_location_permission_provider.dart';
-// import 'package:calculator_flutter_app/features/image_picker/presentation/views/popups/allow_permission_popup.dart';
-// import 'package:calculator_flutter_app/gen/assets.gen.dart';
-// import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
-// import 'package:calculator_flutter_app/util/resources/r.dart';
-// import 'package:calculator_flutter_app/util/toast/toast.dart';
+// import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';
+// import 'package:diesel_powered/features/google_maps/presentation/providers/request_location_permission_provider.dart';
+// import 'package:diesel_powered/features/image_picker/presentation/views/popups/allow_permission_popup.dart';
+// import 'package:diesel_powered/gen/assets.gen.dart';
+// import 'package:diesel_powered/util/exceptions/message_exception.dart';
+// import 'package:diesel_powered/util/resources/r.dart';
+// import 'package:diesel_powered/util/toast/toast.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
