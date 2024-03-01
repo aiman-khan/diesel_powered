@@ -1,7 +1,7 @@
-import 'package:calculator_flutter_app/common/extensions/num.dart';
-import 'package:calculator_flutter_app/common/widgets/back_button_widget.dart';
-import 'package:calculator_flutter_app/features/calculator/presentation/views/calculate_item/widgets/calculation_form.dart';
-import 'package:calculator_flutter_app/features/premium/presentation/views/widgets/get_premium_card_widget.dart';
+import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:diesel_powered/common/widgets/back_button_widget.dart';
+import 'package:diesel_powered/features/calculator/presentation/views/calculate_item/widgets/calculation_form.dart';
+import 'package:diesel_powered/features/premium/presentation/views/widgets/get_premium_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

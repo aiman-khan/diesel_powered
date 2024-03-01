@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:calculator_flutter_app/infrastructure/usecase.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_input.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_output.dart';
-import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
+import 'package:diesel_powered/infrastructure/usecase.dart';
+import 'package:diesel_powered/infrastructure/usecase_input.dart';
+import 'package:diesel_powered/infrastructure/usecase_output.dart';
+import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:injectable/injectable.dart';
 import 'package:permission_handler/permission_handler.dart';
 

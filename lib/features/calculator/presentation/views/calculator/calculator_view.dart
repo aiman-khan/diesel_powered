@@ -1,9 +1,9 @@
-import 'package:calculator_flutter_app/common/extensions/num.dart';
-import 'package:calculator_flutter_app/common/widgets/app_text.dart';
-import 'package:calculator_flutter_app/common/widgets/user_info_widget.dart';
-import 'package:calculator_flutter_app/features/premium/presentation/views/widgets/get_premium_card_widget.dart';
-import 'package:calculator_flutter_app/util/resources/r.dart';
-import 'package:calculator_flutter_app/util/router/paths.dart';
+import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:diesel_powered/common/widgets/app_text.dart';
+import 'package:diesel_powered/common/widgets/user_info_widget.dart';
+import 'package:diesel_powered/features/premium/presentation/views/widgets/get_premium_card_widget.dart';
+import 'package:diesel_powered/util/resources/r.dart';
+import 'package:diesel_powered/util/router/paths.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
