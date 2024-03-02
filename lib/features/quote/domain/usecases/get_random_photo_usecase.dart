@@ -1,9 +1,9 @@
-import 'package:calculator_flutter_app/features/quote/domain/models/quote/quote_entity.dart';
-import 'package:calculator_flutter_app/features/quote/domain/models/quote/quote_model.dart';
-import 'package:calculator_flutter_app/features/quote/domain/repository/auth_repository.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_input.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_output.dart';
+import 'package:diesel_powered/features/quote/domain/models/quote/quote_entity.dart';
+import 'package:diesel_powered/features/quote/domain/models/quote/quote_model.dart';
+import 'package:diesel_powered/features/quote/domain/repository/auth_repository.dart';
+import 'package:diesel_powered/infrastructure/usecase.dart';
+import 'package:diesel_powered/infrastructure/usecase_input.dart';
+import 'package:diesel_powered/infrastructure/usecase_output.dart';
 import 'package:injectable/injectable.dart';
 
 class GetRandomQuoteUsecaseInput extends Input {
