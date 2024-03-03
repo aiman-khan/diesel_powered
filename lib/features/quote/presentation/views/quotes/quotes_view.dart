@@ -1,9 +1,9 @@
-import 'package:calculator_flutter_app/common/extensions/num.dart';
-import 'package:calculator_flutter_app/common/widgets/app_text.dart';
-import 'package:calculator_flutter_app/common/widgets/back_button_widget.dart';
-import 'package:calculator_flutter_app/features/quote/presentation/providers/get_random_photo_provider.dart';
-import 'package:calculator_flutter_app/features/quote/presentation/providers/get_random_quote_provider.dart';
-import 'package:calculator_flutter_app/util/resources/r.dart';
+import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:diesel_powered/common/widgets/app_text.dart';
+import 'package:diesel_powered/common/widgets/back_button_widget.dart';
+import 'package:diesel_powered/features/quote/presentation/providers/get_random_photo_provider.dart';
+import 'package:diesel_powered/features/quote/presentation/providers/get_random_quote_provider.dart';
+import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
