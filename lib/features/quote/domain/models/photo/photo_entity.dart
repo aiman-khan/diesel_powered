@@ -1,4 +1,4 @@
-import 'package:calculator_flutter_app/features/quote/domain/models/photo_url/photo_url_entity.dart';
+import 'package:diesel_powered/features/quote/domain/models/photo_url/photo_url_entity.dart';
 
 abstract class PhotoEntity {
   final PhotoUrlEntity? urls;
