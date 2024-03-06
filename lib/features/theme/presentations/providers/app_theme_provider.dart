@@ -1,6 +1,6 @@
-import 'package:calculator_flutter_app/features/theme/domain/models/theme/dark_theme.dart';
-import 'package:calculator_flutter_app/features/theme/domain/models/theme/light_theme.dart';
-import 'package:calculator_flutter_app/features/theme/domain/models/theme/theme.dart';
+import 'package:diesel_powered/features/theme/domain/models/theme/dark_theme.dart';
+import 'package:diesel_powered/features/theme/domain/models/theme/light_theme.dart';
+import 'package:diesel_powered/features/theme/domain/models/theme/theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppThemeNotifier extends StateNotifier<AppTheme> {
