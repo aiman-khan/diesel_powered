@@ -1,10 +1,10 @@
-import 'package:calculator_flutter_app/features/weather/domain/data/weather_remote_datasource.dart';
-import 'package:calculator_flutter_app/features/weather/domain/models/weather/weather_model.dart';
-import 'package:calculator_flutter_app/features/weather/domain/usecases/get_current_weather_usecase.dart';
-import 'package:calculator_flutter_app/helpers/network_call_helper/network_call_helper.dart';
-import 'package:calculator_flutter_app/util/consts/api.dart';
-import 'package:calculator_flutter_app/util/consts/keys.dart';
-import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
+import 'package:diesel_powered/features/weather/domain/data/weather_remote_datasource.dart';
+import 'package:diesel_powered/features/weather/domain/models/weather/weather_model.dart';
+import 'package:diesel_powered/features/weather/domain/usecases/get_current_weather_usecase.dart';
+import 'package:diesel_powered/helpers/network_call_helper/network_call_helper.dart';
+import 'package:diesel_powered/util/consts/api.dart';
+import 'package:diesel_powered/util/consts/keys.dart';
+import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
