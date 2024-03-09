@@ -1,12 +1,12 @@
-import 'package:calculator_flutter_app/features/quote/data/entities/photo/rest_photo.dart';
-import 'package:calculator_flutter_app/features/quote/data/entities/photo_url/rest_photo_url.dart';
-import 'package:calculator_flutter_app/features/quote/data/entities/quote/rest_quote.dart';
-import 'package:calculator_flutter_app/features/quote/domain/data/auth_remote_datasource.dart';
-import 'package:calculator_flutter_app/features/quote/domain/usecases/get_random_photo_usecase.dart';
-import 'package:calculator_flutter_app/features/quote/domain/usecases/get_random_quote_usecase.dart';
-import 'package:calculator_flutter_app/helpers/network_call_helper/network_call_helper.dart';
-import 'package:calculator_flutter_app/util/consts/api.dart';
-import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
+import 'package:diesel_powered/features/quote/data/entities/photo/rest_photo.dart';
+import 'package:diesel_powered/features/quote/data/entities/photo_url/rest_photo_url.dart';
+import 'package:diesel_powered/features/quote/data/entities/quote/rest_quote.dart';
+import 'package:diesel_powered/features/quote/domain/data/auth_remote_datasource.dart';
+import 'package:diesel_powered/features/quote/domain/usecases/get_random_photo_usecase.dart';
+import 'package:diesel_powered/features/quote/domain/usecases/get_random_quote_usecase.dart';
+import 'package:diesel_powered/helpers/network_call_helper/network_call_helper.dart';
+import 'package:diesel_powered/util/consts/api.dart';
+import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
