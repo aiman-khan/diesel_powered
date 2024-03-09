@@ -38,6 +38,13 @@ class $AssetsPngsGen {
   AssetGenImage get splashText =>
       const AssetGenImage('assets/pngs/splash_text.png');
 
+  AssetGenImage get gpay => const AssetGenImage('assets/pngs/gpay.png');
+
+  AssetGenImage get visa => const AssetGenImage('assets/pngs/visa.png');
+
+  AssetGenImage get mastercard =>
+      const AssetGenImage('assets/pngs/mastercard.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         destinationIcon,
@@ -140,6 +147,9 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/tick_icon.svg
   SvgGenImage get tickIcon => const SvgGenImage('assets/svgs/tick_icon.svg');
 
+  SvgGenImage get wheretToIcon =>
+      const SvgGenImage('assets/svgs/where_to_icon.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         aboutIcon,
@@ -166,7 +176,7 @@ class $AssetsSvgsGen {
         sunIcon,
         swapIcon,
         temperatureIcon,
-        tickIcon
+        tickIcon,
       ];
 }
 
