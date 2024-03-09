@@ -1,4 +1,4 @@
-import 'package:calculator_flutter_app/gen/assets.gen.dart';
+import 'package:diesel_powered/gen/assets.gen.dart';
 
 enum BottomNavItem {
   calculator,
