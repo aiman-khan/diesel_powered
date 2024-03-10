@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:diesel_powered/common/extensions/num.dart';
-import 'package:diesel_powered/common/widgets/phone_input/countries.dart';
-import 'package:diesel_powered/common/widgets/phone_input/country_picker_dialog.dart';
-import 'package:diesel_powered/common/widgets/phone_input/intl_phone_field.dart';
-import 'package:diesel_powered/common/widgets/phone_input/phone_number.dart';
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/common/extensions/num.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/countries.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/country_picker_dialog.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/intl_phone_field.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/phone_number.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
