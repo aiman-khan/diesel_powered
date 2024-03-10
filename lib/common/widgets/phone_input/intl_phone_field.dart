@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:diesel_powered/common/widgets/phone_input/countries.dart';
-import 'package:diesel_powered/common/widgets/phone_input/country_picker_dialog.dart';
-import 'package:diesel_powered/common/widgets/phone_input/helpers.dart';
-import 'package:diesel_powered/common/widgets/phone_input/phone_number.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/countries.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/country_picker_dialog.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/helpers.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/phone_number.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
