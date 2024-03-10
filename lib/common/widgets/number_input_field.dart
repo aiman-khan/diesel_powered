@@ -15,6 +15,7 @@ class NumberInputField extends StatelessWidget {
     this.shadowColor,
     this.enabled = true,
     this.fillColor,
+    this.suffixIcon,
     super.key,
   });
 
@@ -30,11 +31,12 @@ class NumberInputField extends StatelessWidget {
   final Color? shadowColor;
   final bool enabled;
   final Color? fillColor;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      labelText: labelText ?? '',
+      labelText: labelText,
       hintText: hintText ?? '',
       controller: controller,
       enabled: enabled,
@@ -51,6 +53,7 @@ class NumberInputField extends StatelessWidget {
       focusNode: focusNode,
       onEditingComplete: onEditingComplete,
       fillColor: fillColor,
+      suffixIcon: suffixIcon,
     );
   }
 }
