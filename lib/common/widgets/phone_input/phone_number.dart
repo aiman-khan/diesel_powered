@@ -1,4 +1,4 @@
-import 'package:diesel_powered/common/widgets/phone_input/countries.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/countries.dart';
 
 class NumberTooLongException implements Exception {}
 
