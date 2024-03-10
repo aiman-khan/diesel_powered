@@ -1,16 +1,18 @@
-import 'package:diesel_powered/features/about/presentation/views/about/about_view.dart';
-import 'package:diesel_powered/features/about/presentation/views/privacy_policy/privacy_policy_view.dart';
-import 'package:diesel_powered/features/about/presentation/views/terms_of_service/terms_of_service_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/forget_password/forgot_password_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/login/login_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/otp_verification/otp_verification_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/profile/profile_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/register/sign_up_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/reset_password/reset_password.dart';
+import 'package:diesel_powered/features/calculator/presentation/views/calculate_item/calculate_item_view.dart';
+import 'package:diesel_powered/features/contact/presentation/views/add_contact/add_contact_view.dart';
+import 'package:diesel_powered/features/contact/presentation/views/contact_list/contact_list_view.dart';
 import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';
 import 'package:diesel_powered/features/google_maps/presentation/views/search_location.dart';
 import 'package:diesel_powered/features/google_maps/presentation/views/view_location.dart';
 import 'package:diesel_powered/features/home/presentation/views/home_view.dart';
+import 'package:diesel_powered/features/premium/presentation/views/add_card/add_card_view.dart';
+import 'package:diesel_powered/features/premium/presentation/views/payment_method/payment_method_view.dart';
 import 'package:diesel_powered/features/quote/presentation/views/quotes/quotes_view.dart';
 import 'package:diesel_powered/features/splash/presentation/splash_view.dart';
 import 'package:diesel_powered/util/router/paths.dart';
@@ -66,41 +68,54 @@ final router = GoRouter(
         return const ProfileView();
       },
     ),
-    GoRoute(
-      path: RoutePaths.about,
-      builder: (context, state) {
-        return const AboutView();
-      },
-    ),
-    GoRoute(
-      path: RoutePaths.privacyPolicy,
-      builder: (context, state) {
-        return const PrivacyPolicyView();
-      },
-    ),
-    GoRoute(
-      path: RoutePaths.termsOfService,
-      builder: (context, state) {
-        return const TermsOfServiceView();
-      },
-    ),
-    GoRoute(
-      path: RoutePaths.mapView,
-      builder: (context, state) {
-        final data = state.extra as LatLngModel;
-        return ViewLocation(latLng: data);
-      },
-    ),
-    GoRoute(
-      path: RoutePaths.searchLocation,
-      builder: (context, state) {
-        return const SearchLocation();
-      },
-    ),
+    // GoRoute(
+    //   path: RoutePaths.mapView,
+    //   builder: (context, state) {
+    //     final data = state.extra as LatLngModel;
+    //     return ViewLocation(latLng: data);
+    //   },
+    // ),
+    // GoRoute(
+    //   path: RoutePaths.searchLocation,
+    //   builder: (context, state) {
+    //     return const SearchLocation();
+    //   },
+    // ),
     GoRoute(
       path: RoutePaths.quotes,
       builder: (context, state) {
         return const QuotesView();
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.calculateItem,
+      builder: (context, state) {
+        final data = state.extra as String;
+        return CalculateItemView(title: data);
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.paymentMethod,
+      builder: (context, state) {
+        return const PaymentMethodView();
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.addCard,
+      builder: (context, state) {
+        return const AddCardView();
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.addContact,
+      builder: (context, state) {
+        return const AddContactView();
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.contactList,
+      builder: (context, state) {
+        return const ContactListView();
       },
     ),
   ],
