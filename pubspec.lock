@@ -366,6 +366,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_auto_localizer:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "28b3bce38a849deff1c01a5c80330fc46c4395ae"
+      url: "https://github.com/aiman-khan/flutter_auto_localizer.git"
+    source: git
+    version: "1.0.0"
   flutter_cache_manager:
     dependency: transitive
     description:
@@ -1341,6 +1350,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  translator:
+    dependency: transitive
+    description:
+      name: translator
+      sha256: "03521d194365e758c66444a3b03005733e1daf0cd3de9c63257bf82b1a4e2ba1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   typed_data:
     dependency: transitive
     description:
