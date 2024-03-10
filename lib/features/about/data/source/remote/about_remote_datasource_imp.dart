@@ -1,8 +1,8 @@
-import 'package:diesel_powered/features/about/data/source/remote/about_remote_datasource.dart';
-import 'package:diesel_powered/features/about/domain/usecases/get_about.dart';
-import 'package:diesel_powered/features/about/domain/usecases/get_privacy_policy.dart';
-import 'package:diesel_powered/features/about/domain/usecases/get_terms_and_conditions.dart';
-import 'package:diesel_powered/helpers/network_call_helper/network_call_helper.dart';
+import 'package:calculator_flutter_app/features/about/data/source/remote/about_remote_datasource.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_about.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_privacy_policy.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_terms_and_conditions.dart';
+import 'package:calculator_flutter_app/helpers/network_call_helper/network_call_helper.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
