@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/about/domain/models/about/content_entity.dart';
+import 'package:calculator_flutter_app/features/about/domain/models/about/content_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'rest_content_entity.freezed.dart';
