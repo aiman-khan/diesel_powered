@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:diesel_powered/common/extensions/num.dart';
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/common/extensions/num.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
