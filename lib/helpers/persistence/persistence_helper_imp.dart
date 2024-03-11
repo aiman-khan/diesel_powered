@@ -1,4 +1,4 @@
-import 'package:diesel_powered/helpers/persistence/persistence_helper.dart';
+import 'package:calculator_flutter_app/helpers/persistence/persistence_helper.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:injectable/injectable.dart';
 
