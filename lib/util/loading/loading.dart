@@ -1,5 +1,5 @@
-import 'package:diesel_powered/common/widgets/loading_widget.dart';
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/common/widgets/loading_widget.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:flutter/material.dart';
 
 OverlayEntry? _overlayEntry;
