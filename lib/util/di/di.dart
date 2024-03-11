@@ -1,4 +1,4 @@
-import 'package:diesel_powered/util/di/di.config.dart';
+import 'package:calculator_flutter_app/util/di/di.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
