@@ -1,6 +1,6 @@
-import 'package:diesel_powered/features/weather/domain/data/weather_remote_datasource.dart';
-import 'package:diesel_powered/features/weather/domain/repository/weather_repository.dart';
-import 'package:diesel_powered/features/weather/domain/usecases/get_current_weather_usecase.dart';
+import 'package:calculator_flutter_app/features/weather/domain/data/weather_remote_datasource.dart';
+import 'package:calculator_flutter_app/features/weather/domain/repository/weather_repository.dart';
+import 'package:calculator_flutter_app/features/weather/domain/usecases/get_current_weather_usecase.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: WeatherRepository)
