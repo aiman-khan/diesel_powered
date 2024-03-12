@@ -1,4 +1,4 @@
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 void showToast({required String msg}) {
