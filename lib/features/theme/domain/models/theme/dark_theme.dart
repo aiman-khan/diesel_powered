@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:diesel_powered/features/theme/domain/models/theme/theme.dart';
+import 'package:calculator_flutter_app/features/theme/domain/models/theme/theme.dart';
 
 class AppDarkTheme implements AppTheme {
   @override
