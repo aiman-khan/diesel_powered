@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/quote/domain/models/quote/quote_entity.dart';
+import 'package:calculator_flutter_app/features/quote/domain/models/quote/quote_entity.dart';
 
 class QuoteModel {
   final String content;
