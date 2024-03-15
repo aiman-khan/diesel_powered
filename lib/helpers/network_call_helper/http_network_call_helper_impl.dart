@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:diesel_powered/helpers/network_call_helper/network_call_helper.dart';
+import 'package:calculator_flutter_app/helpers/network_call_helper/network_call_helper.dart';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
