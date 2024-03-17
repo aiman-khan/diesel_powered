@@ -1,5 +1,5 @@
-import 'package:diesel_powered/features/quote/domain/models/photo/photo_entity.dart';
-import 'package:diesel_powered/features/quote/domain/models/photo_url/photo_url_model.dart';
+import 'package:calculator_flutter_app/features/quote/domain/models/photo/photo_entity.dart';
+import 'package:calculator_flutter_app/features/quote/domain/models/photo_url/photo_url_model.dart';
 
 class PhotoModel {
   final PhotoUrlModel urls;
