@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/quote/domain/models/photo_url/photo_url_entity.dart';
+import 'package:calculator_flutter_app/features/quote/domain/models/photo_url/photo_url_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'rest_photo_url.freezed.dart';
