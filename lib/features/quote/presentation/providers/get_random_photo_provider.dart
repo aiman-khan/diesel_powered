@@ -1,6 +1,6 @@
-import 'package:diesel_powered/features/quote/domain/models/photo/photo_model.dart';
-import 'package:diesel_powered/features/quote/domain/usecases/get_random_quote_usecase.dart';
-import 'package:diesel_powered/util/di/di.dart';
+import 'package:calculator_flutter_app/features/quote/domain/models/photo/photo_model.dart';
+import 'package:calculator_flutter_app/features/quote/domain/usecases/get_random_quote_usecase.dart';
+import 'package:calculator_flutter_app/util/di/di.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final getRandomPhotoProvider =
