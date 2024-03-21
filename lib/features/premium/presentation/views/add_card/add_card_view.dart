@@ -1,11 +1,11 @@
-import 'package:diesel_powered/common/extensions/num.dart';
-import 'package:diesel_powered/common/widgets/app_filled_button.dart';
-import 'package:diesel_powered/common/widgets/back_button_widget.dart';
-import 'package:diesel_powered/common/widgets/date_input_field.dart';
-import 'package:diesel_powered/common/widgets/number_input_field.dart';
-import 'package:diesel_powered/common/widgets/text_input_field.dart';
-import 'package:diesel_powered/util/resources/r.dart';
-import 'package:diesel_powered/util/toast/toast.dart';
+import 'package:calculator_flutter_app/common/extensions/num.dart';
+import 'package:calculator_flutter_app/common/widgets/app_filled_button.dart';
+import 'package:calculator_flutter_app/common/widgets/back_button_widget.dart';
+import 'package:calculator_flutter_app/common/widgets/date_input_field.dart';
+import 'package:calculator_flutter_app/common/widgets/number_input_field.dart';
+import 'package:calculator_flutter_app/common/widgets/text_input_field.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
+import 'package:calculator_flutter_app/util/toast/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
