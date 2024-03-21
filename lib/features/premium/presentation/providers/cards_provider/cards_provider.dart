@@ -1,5 +1,5 @@
-import 'package:diesel_powered/features/premium/domain/models/card/card_model.dart';
-import 'package:diesel_powered/gen/assets.gen.dart';
+import 'package:calculator_flutter_app/features/premium/domain/models/card/card_model.dart';
+import 'package:calculator_flutter_app/gen/assets.gen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final cardsProvider = StateProvider((ref) {
