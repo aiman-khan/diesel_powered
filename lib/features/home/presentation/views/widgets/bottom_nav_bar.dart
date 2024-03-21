@@ -1,6 +1,6 @@
-import 'package:diesel_powered/features/home/domain/enums/bottom_nav_item.dart';
-import 'package:diesel_powered/features/home/presentation/providers/selected_nav_item_provider/selected_nav_item_provider.dart';
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/features/home/domain/enums/bottom_nav_item.dart';
+import 'package:calculator_flutter_app/features/home/presentation/providers/selected_nav_item_provider/selected_nav_item_provider.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
