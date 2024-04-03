@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/auth/domain/models/vehicle_model/vehicle_model_entity.dart';
+import 'package:calculator_flutter_app/features/auth/domain/models/vehicle_model/vehicle_model_entity.dart';
 
 class VehicleModelModel {
   final int id;
