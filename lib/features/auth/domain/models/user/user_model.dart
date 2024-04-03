@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/auth/domain/models/user/user_entity.dart';
+import 'package:calculator_flutter_app/features/auth/domain/models/user/user_entity.dart';
 
 class UserModel {
   final int id;
