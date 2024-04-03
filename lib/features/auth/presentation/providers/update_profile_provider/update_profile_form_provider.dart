@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/auth/domain/models/update_profile_form/update_profile_form_model.dart';
+import 'package:calculator_flutter_app/features/auth/domain/models/update_profile_form/update_profile_form_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'update_profile_form_provider.g.dart';
