@@ -1,7 +1,7 @@
-import 'package:diesel_powered/features/about/domain/usecases/get_about.dart';
-import 'package:diesel_powered/features/about/domain/usecases/get_privacy_policy.dart';
-import 'package:diesel_powered/features/about/domain/usecases/get_terms_and_conditions.dart';
-import 'package:diesel_powered/infrastructure/repository.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_about.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_privacy_policy.dart';
+import 'package:calculator_flutter_app/features/about/domain/usecases/get_terms_and_conditions.dart';
+import 'package:calculator_flutter_app/infrastructure/repository.dart';
 
 abstract class AboutRepository extends Repository {
   Future<GetTermsAndConditionsUsecaseOutput> getTermsAndConditions(
