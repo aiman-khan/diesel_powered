@@ -1,4 +1,4 @@
-import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:calculator_flutter_app/common/extensions/num.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
