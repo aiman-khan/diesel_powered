@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/auth/domain/models/login_form/login_form_model.dart';
+import 'package:calculator_flutter_app/features/auth/domain/models/login_form/login_form_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_form_provider.g.dart';
