@@ -1,5 +1,5 @@
-import 'package:diesel_powered/common/widgets/phone_input/countries.dart';
-import 'package:diesel_powered/common/widgets/phone_input/helpers.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/countries.dart';
+import 'package:calculator_flutter_app/common/widgets/phone_input/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
