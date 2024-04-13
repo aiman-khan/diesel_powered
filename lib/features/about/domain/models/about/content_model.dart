@@ -1,4 +1,4 @@
-import 'package:diesel_powered/features/about/domain/models/about/content_entity.dart';
+import 'package:calculator_flutter_app/features/about/domain/models/about/content_entity.dart';
 
 class ContentModel {
   final String title;
