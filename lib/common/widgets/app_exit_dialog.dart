@@ -1,5 +1,5 @@
-import 'package:diesel_powered/common/widgets/app_filled_button.dart';
-import 'package:diesel_powered/common/widgets/app_outlined_text_button.dart';
+import 'package:calculator_flutter_app/common/widgets/app_filled_button.dart';
+import 'package:calculator_flutter_app/common/widgets/app_outlined_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
