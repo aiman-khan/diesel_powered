@@ -1,7 +1,7 @@
-import 'package:diesel_powered/features/auth/domain/usecases/verify_otp.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/otp_form_provider/otp_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/register/register_form_provider.dart';
-import 'package:diesel_powered/util/di/di.dart';
+import 'package:calculator_flutter_app/features/auth/domain/usecases/verify_otp.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/otp_form_provider/otp_form_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/register/register_form_provider.dart';
+import 'package:calculator_flutter_app/util/di/di.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'verify_otp_provider.g.dart';
