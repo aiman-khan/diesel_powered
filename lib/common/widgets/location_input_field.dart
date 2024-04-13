@@ -1,5 +1,5 @@
-import 'package:diesel_powered/common/widgets/custom_text_form_field.dart';
-import 'package:diesel_powered/util/resources/r.dart';
+import 'package:calculator_flutter_app/common/widgets/custom_text_form_field.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
