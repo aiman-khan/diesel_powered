@@ -7,7 +7,6 @@ import 'package:calculator_flutter_app/features/auth/presentation/views/reset_pa
 import 'package:calculator_flutter_app/features/calculator/presentation/views/calculate_item/calculate_item_view.dart';
 import 'package:calculator_flutter_app/features/contact/presentation/views/add_contact/add_contact_view.dart';
 import 'package:calculator_flutter_app/features/contact/presentation/views/contact_list/contact_list_view.dart';
-import 'package:calculator_flutter_app/features/google_maps/presentation/views/view_location.dart';
 import 'package:calculator_flutter_app/features/home/presentation/views/home_view.dart';
 import 'package:calculator_flutter_app/features/premium/presentation/views/add_card/add_card_view.dart';
 import 'package:calculator_flutter_app/features/premium/presentation/views/payment_method/payment_method_view.dart';
