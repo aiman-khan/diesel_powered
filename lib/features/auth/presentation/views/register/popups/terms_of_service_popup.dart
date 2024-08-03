@@ -28,7 +28,7 @@ class TermsOfServicePopup extends ConsumerWidget {
             ),
           ),
           const Center(
-            child: const AppText(
+            child: AppText(
               text: 'Terms of Service',
               fontWeight: FontWeight.w700,
               fontSize: 24,

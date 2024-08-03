@@ -1,14 +1,8 @@
 import 'package:diesel_powered/common/extensions/num.dart';
-import 'package:diesel_powered/common/widgets/app_filled_button.dart';
 import 'package:diesel_powered/common/widgets/app_text.dart';
-import 'package:diesel_powered/common/widgets/back_button_widget.dart';
-import 'package:diesel_powered/common/widgets/email_input_field.dart';
-import 'package:diesel_powered/common/widgets/name_input_field.dart';
-import 'package:diesel_powered/common/widgets/phone_number_input_field.dart';
 import 'package:diesel_powered/common/widgets/user_avatar.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/driver_provider/driver_provider.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/views/profile/popups/delete_account_popup.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_camera_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_gallery_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/request_camera_permission_provider.dart';
@@ -34,38 +28,8 @@ class ProfileView extends ConsumerStatefulWidget {
 }
 
 class _ProfileViewState extends ConsumerState<ProfileView> {
-  final formKey = GlobalKey<FormState>();
-
-  final nameController = TextEditingController();
-  final emailController = TextEditingController();
-  final phoneNumberController = TextEditingController();
-
   String imageUrl = '';
   bool isUpdated = false;
-
-  @override
-  void initState() {
-    super.initState();
-    initializeControllers();
-  }
-
-  Future<void> initializeControllers() async {
-    final user = await ref.read(driverProvider.future);
-    nameController.text = user!.name;
-    emailController.text = user.email;
-    phoneNumberController.text = user.phone!;
-  }
-
-  Future<void> disposeControllers() async {
-    nameController.dispose();
-    emailController.dispose();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    disposeControllers();
-  }
 
   void _update() {
     showToast(msg: 'Your profile has been updated');
@@ -165,95 +129,92 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Form(
-        key: formKey,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
-          child: Column(
-            children: [
-              30.hb,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        child: Column(
+          children: [
+            30.hb,
 
-              /// [User Image]
-              /// [Edit profile picture]
-              Consumer(builder: (context, ref, _) {
-                final userAsync = ref.watch(driverProvider);
+            /// [User Image]
+            /// [Edit profile picture]
+            Consumer(builder: (context, ref, _) {
+              final userAsync = ref.watch(driverProvider);
 
-                if (!userAsync.hasValue) {
-                  return const SizedBox();
-                }
+              if (!userAsync.hasValue) {
+                return const SizedBox();
+              }
 
-                final user = userAsync.value;
-                return Column(
-                  children: [
-                    Stack(
-                      children: [
-                        UserProfileAvatar(
-                          image: user!.img,
-                          size: 82.r,
-                        ),
-                        // Positioned(
-                        //   right: 0,
-                        //   bottom: 0,
-                        //   child: Assets.svgs.tickIcon.svg(
-                        //     height: 12.r,
-                        //   ),
-                        // )
-                      ],
-                    ),
-                    16.hb,
-                    AppText(
-                      text: user.name,
-                      color: R.colors.secondary,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),
-                    2.hb,
-                    AppText(
-                      text: user.email,
-                      color: R.colors.secondary.withOpacity(0.5),
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                    )
-                  ],
-                );
-              }),
+              final user = userAsync.value;
+              return Column(
+                children: [
+                  Stack(
+                    children: [
+                      UserProfileAvatar(
+                        image: user!.img,
+                        size: 82.r,
+                      ),
+                      // Positioned(
+                      //   right: 0,
+                      //   bottom: 0,
+                      //   child: Assets.svgs.tickIcon.svg(
+                      //     height: 12.r,
+                      //   ),
+                      // )
+                    ],
+                  ),
+                  16.hb,
+                  AppText(
+                    text: user.name,
+                    color: R.colors.secondary,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                  ),
+                  2.hb,
+                  AppText(
+                    text: user.email,
+                    color: R.colors.secondary.withOpacity(0.5),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 13,
+                  )
+                ],
+              );
+            }),
 
-              24.hb,
+            24.hb,
 
-              const GetPremiumCardWidget(),
+            const GetPremiumCardWidget(),
 
-              29.hb,
+            29.hb,
 
-              _buildSettingTile(
-                name: 'Contact List',
-                icon: Assets.svgs.addContactIcon.svg(),
-                onTap: () {},
-              ),
+            _buildSettingTile(
+              name: 'Contact List',
+              icon: Assets.svgs.addContactIcon.svg(),
+              onTap: () {},
+            ),
 
-              _buildSettingTile(
-                name: 'Quotes',
-                icon: Assets.svgs.quoteIcon.svg(),
-                onTap: () {},
-              ),
+            _buildSettingTile(
+              name: 'Quotes',
+              icon: Assets.svgs.quoteIcon.svg(),
+              onTap: () {},
+            ),
 
-              _buildSettingTile(
-                name: 'Help Center',
-                icon: Assets.svgs.helpIcon.svg(),
-                onTap: () {},
-              ),
-              _buildSettingTile(
-                name: 'Settings',
-                icon: Assets.svgs.settingsIcon.svg(),
-                onTap: () {},
-              ),
-              _buildSettingTile(
-                name: 'Logout',
-                icon: Assets.svgs.logoutIcon.svg(),
-                color: R.colors.warningRed,
-                onTap: () {},
-              ),
-            ],
-          ),
+            _buildSettingTile(
+              name: 'Help Center',
+              icon: Assets.svgs.helpIcon.svg(),
+              onTap: () {},
+            ),
+            _buildSettingTile(
+              name: 'Settings',
+              icon: Assets.svgs.settingsIcon.svg(),
+              onTap: () {},
+            ),
+            _buildSettingTile(
+              name: 'Logout',
+              icon: Assets.svgs.logoutIcon.svg(),
+              color: R.colors.warningRed,
+              onTap: () {},
+            ),
+          ],
         ),
       ),
     );
