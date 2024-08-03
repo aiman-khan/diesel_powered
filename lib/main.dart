@@ -1,4 +1,5 @@
 import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:diesel_powered/firebase_options.dart';
 import 'package:diesel_powered/helpers/persistence/persistence_helper.dart';
 import 'package:diesel_powered/util/di/di.dart';
 import 'package:diesel_powered/util/router/router.dart';
@@ -12,7 +13,9 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   configureDependencies();
   await sl<PersistenceHelper>().init();
   await SystemChrome.setPreferredOrientations([
