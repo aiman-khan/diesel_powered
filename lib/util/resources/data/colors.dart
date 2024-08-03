@@ -9,6 +9,7 @@ class _Colors {
   final Color white = const Color(0xFFFFFFFF);
 
   final Color primary = const Color(0xFF19B86C);
+  final Color primary2 = const Color(0xFF063E1E);
   final Color secondary = const Color(0xFF1D1D1D);
 
   final Color greyTextField = const Color(0xFFF9FAF9);

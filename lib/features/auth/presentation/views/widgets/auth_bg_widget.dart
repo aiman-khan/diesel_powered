@@ -26,12 +26,6 @@ class AuthBgWidget extends StatelessWidget {
           Container(
             width: 1.sw,
             height: 1.sh,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(Assets.pngs.authBg.path),
-                fit: BoxFit.cover,
-              ),
-            ),
             child: Column(
               children: [
                 44.hb,

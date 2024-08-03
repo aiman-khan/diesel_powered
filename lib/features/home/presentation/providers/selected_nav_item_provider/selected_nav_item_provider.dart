@@ -6,7 +6,7 @@ part 'selected_nav_item_provider.g.dart';
 @riverpod
 class SelectedNavItem extends _$SelectedNavItem {
   @override
-  BottomNavItem build() => BottomNavItem.myLoads;
+  BottomNavItem build() => BottomNavItem.calculator;
 
   @override
   set state(BottomNavItem newState) => super.state = newState;

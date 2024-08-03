@@ -59,7 +59,7 @@ class _DeleteAccountPopupState extends ConsumerState<DeleteAccountPopup> {
             ),
           ),
           8.hb,
-          Assets.svgs.deleteAccount.svg(
+          Assets.svgs.deleteIcon.svg(
             width: 156.w,
             height: 156.h,
           ),

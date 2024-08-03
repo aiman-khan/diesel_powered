@@ -56,7 +56,7 @@ class _AppBottomNavBarState extends ConsumerState<AppBottomNavBar> {
         },
       ),
       onTap: (int value) {
-        if (value == BottomNavItem.postLoad.index) {
+        if (value == BottomNavItem.location.index) {
           widget.bottomBarController.jumpTo(currentItem.index);
           showModalBottomSheet<void>(
             context: context,

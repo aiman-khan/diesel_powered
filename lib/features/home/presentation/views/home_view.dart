@@ -1,10 +1,10 @@
 import 'package:diesel_powered/common/extensions/num.dart';
 import 'package:diesel_powered/common/widgets/app_exit_dialog.dart';
+import 'package:diesel_powered/features/auth/presentation/views/profile_update/profile_update_view.dart';
 import 'package:diesel_powered/features/home/domain/enums/bottom_nav_item.dart';
 import 'package:diesel_powered/features/home/presentation/providers/selected_nav_item_provider/selected_nav_item_provider.dart';
 import 'package:diesel_powered/features/home/presentation/views/widgets/bottom_bar/notch_bottom_bar_controller.dart';
 import 'package:diesel_powered/features/home/presentation/views/widgets/bottom_nav_bar.dart';
-import 'package:diesel_powered/features/home/presentation/views/widgets/menu_notification_header.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,10 +21,12 @@ class _HomeViewState extends ConsumerState<HomeView> {
   final bottomBarController = NotchBottomBarController();
 
   Widget view(BottomNavItem currentView) {
-    if (currentView.isPostLoad) return const SizedBox();
-    if (currentView.isBook) return const SizedBox();
-    if (currentView.isMyLoads) return const SizedBox();
-    if (currentView.isRequest) return const SizedBox();
+    if (currentView.isLocation) return const SizedBox();
+    if (currentView.isCalendar) return const SizedBox();
+    if (currentView.isCalculator) return const SizedBox();
+    if (currentView.isWeather) return const SizedBox();
+    if (currentView.isProfile) return const ProfileView();
+
     return const SizedBox();
   }
 
@@ -53,10 +55,10 @@ class _HomeViewState extends ConsumerState<HomeView> {
       },
       child: PopScope(
         onPopInvoked: (v) {
-          if (currentView != BottomNavItem.myLoads) {
+          if (currentView != BottomNavItem.calculator) {
             ref
                 .read(selectedNavItemProvider.notifier)
-                .update((state) => BottomNavItem.myLoads);
+                .update((state) => BottomNavItem.calculator);
             bottomBarController.jumpTo(0);
           } else {
             onWillPop(context);
@@ -74,8 +76,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
             child: Column(
               children: [
                 8.hb,
-
-                const MenuNotificationHeader(),
 
                 /// [View]
                 Expanded(

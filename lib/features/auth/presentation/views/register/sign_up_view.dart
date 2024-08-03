@@ -62,12 +62,6 @@ class _RegisterViewState extends ConsumerState<SignUpView> {
         body: Container(
           width: 1.sw,
           height: 1.sh,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(Assets.pngs.authBg.path),
-              fit: BoxFit.cover,
-            ),
-          ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(

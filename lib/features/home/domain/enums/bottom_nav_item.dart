@@ -1,22 +1,25 @@
 import 'package:diesel_powered/gen/assets.gen.dart';
 
 enum BottomNavItem {
-  myLoads,
-  book,
-  postLoad,
-  request;
+  calculator,
+  calendar,
+  location,
+  weather,
+  profile;
 
   String get iconPath {
     return switch (this) {
-      myLoads => Assets.svgs.navMyLoadsIcon.path,
-      book => Assets.svgs.navBookIcon.path,
-      postLoad => Assets.svgs.navPostLoadIcon.path,
-      request => Assets.svgs.navRequestIcon.path,
+      calculator => Assets.svgs.calculatorIcon.path,
+      calendar => Assets.svgs.calendarIcon.path,
+      location => Assets.svgs.locationIcon.path,
+      weather => Assets.svgs.humidityIcon.path,
+      profile => Assets.svgs.profileIcon.path,
     };
   }
 
-  bool get isMyLoads => this == BottomNavItem.myLoads;
-  bool get isBook => this == BottomNavItem.book;
-  bool get isPostLoad => this == BottomNavItem.postLoad;
-  bool get isRequest => this == BottomNavItem.request;
+  bool get isCalculator => this == BottomNavItem.calculator;
+  bool get isCalendar => this == BottomNavItem.calendar;
+  bool get isLocation => this == BottomNavItem.location;
+  bool get isWeather => this == BottomNavItem.weather;
+  bool get isProfile => this == BottomNavItem.profile;
 }

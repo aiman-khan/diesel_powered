@@ -51,7 +51,7 @@ class PrivacyPolicyView extends ConsumerWidget {
                       delegate: SliverAppBarDelegate(
                         minHeight: 0,
                         maxHeight: 256.h,
-                        child: Assets.pngs.aboutImage.image(width: 335),
+                        child: Assets.svgs.aboutIcon.svg(width: 335),
                       ),
                     ),
 

@@ -1,5 +1,6 @@
 import 'package:diesel_powered/features/auth/presentation/providers/bearer_provider/bearer_provider.dart';
 import 'package:diesel_powered/gen/assets.gen.dart';
+import 'package:diesel_powered/util/resources/r.dart';
 import 'package:diesel_powered/util/router/paths.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,15 +40,19 @@ class _SplashViewState extends ConsumerState<SplashView> {
         width: 1.sw,
         height: 1.sh,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(Assets.pngs.splashBg.path),
-            fit: BoxFit.cover,
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              R.colors.primary,
+              R.colors.primary2,
+            ],
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 60.w),
           child: SizedBox(
-            child: Assets.svgs.appLogo.svg(
+            child: Assets.pngs.splashText.image(
               height: 70.h,
               width: 270.w,
             ),

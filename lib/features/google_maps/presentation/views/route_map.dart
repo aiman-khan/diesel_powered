@@ -80,12 +80,12 @@ class _RouteMapWidgetState extends ConsumerState<RouteMapWidget> {
 
     firstPointMarker = await BitmapDescriptor.fromAssetImage(
       const ImageConfiguration(),
-      Assets.pngs.pickupIcon.path,
+      Assets.pngs.originIcon.path,
     );
 
     lastPointMarker = await BitmapDescriptor.fromAssetImage(
       const ImageConfiguration(),
-      Assets.pngs.deliveryIcon.path,
+      Assets.pngs.destinationIcon.path,
     );
 
     initMarkersAndRoute();

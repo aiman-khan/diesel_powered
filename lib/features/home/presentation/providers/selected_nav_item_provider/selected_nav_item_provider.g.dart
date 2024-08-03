@@ -6,7 +6,7 @@ part of 'selected_nav_item_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$selectedNavItemHash() => r'9e1d943fcc6d37d754e0f53037e9566a4387652e';
+String _$selectedNavItemHash() => r'ae2b2c46d39a6b672ea4427e3ea428b68a45321d';
 
 /// See also [SelectedNavItem].
 @ProviderFor(SelectedNavItem)

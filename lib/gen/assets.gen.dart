@@ -15,311 +15,110 @@ import 'package:vector_graphics/vector_graphics.dart';
 class $AssetsPngsGen {
   const $AssetsPngsGen();
 
-  /// File path: assets/pngs/about_image.png
-  AssetGenImage get aboutImage =>
-      const AssetGenImage('assets/pngs/about_image.png');
+  /// File path: assets/pngs/destination_icon.png
+  AssetGenImage get destinationIcon =>
+      const AssetGenImage('assets/pngs/destination_icon.png');
 
-  /// File path: assets/pngs/ai_your_vehicle_banner.png
-  AssetGenImage get aiYourVehicleBanner =>
-      const AssetGenImage('assets/pngs/ai_your_vehicle_banner.png');
+  /// File path: assets/pngs/fb_icon.png
+  AssetGenImage get fbIcon => const AssetGenImage('assets/pngs/fb_icon.png');
 
-  /// File path: assets/pngs/auth_bg.png
-  AssetGenImage get authBg => const AssetGenImage('assets/pngs/auth_bg.png');
+  /// File path: assets/pngs/google_icon.png
+  AssetGenImage get googleIcon =>
+      const AssetGenImage('assets/pngs/google_icon.png');
 
-  /// File path: assets/pngs/bank_update_image.png
-  AssetGenImage get bankUpdateImage =>
-      const AssetGenImage('assets/pngs/bank_update_image.png');
+  /// File path: assets/pngs/origin_icon.png
+  AssetGenImage get originIcon =>
+      const AssetGenImage('assets/pngs/origin_icon.png');
 
-  /// File path: assets/pngs/banner_bg.png
-  AssetGenImage get bannerBg =>
-      const AssetGenImage('assets/pngs/banner_bg.png');
+  /// File path: assets/pngs/premium_badge.png
+  AssetGenImage get premiumBadge =>
+      const AssetGenImage('assets/pngs/premium_badge.png');
 
-  /// File path: assets/pngs/delivery_icon.png
-  AssetGenImage get deliveryIcon =>
-      const AssetGenImage('assets/pngs/delivery_icon.png');
-
-  /// File path: assets/pngs/en_lang_icon.png
-  AssetGenImage get enLangIcon =>
-      const AssetGenImage('assets/pngs/en_lang_icon.png');
-
-  /// File path: assets/pngs/gr_lang_icon.png
-  AssetGenImage get grLangIcon =>
-      const AssetGenImage('assets/pngs/gr_lang_icon.png');
-
-  /// File path: assets/pngs/load_booking_img.png
-  AssetGenImage get loadBookingImg =>
-      const AssetGenImage('assets/pngs/load_booking_img.png');
-
-  /// File path: assets/pngs/ob1image.png
-  AssetGenImage get ob1image => const AssetGenImage('assets/pngs/ob1image.png');
-
-  /// File path: assets/pngs/ob2image.png
-  AssetGenImage get ob2image => const AssetGenImage('assets/pngs/ob2image.png');
-
-  /// File path: assets/pngs/ob3image.png
-  AssetGenImage get ob3image => const AssetGenImage('assets/pngs/ob3image.png');
-
-  /// File path: assets/pngs/ob4image.png
-  AssetGenImage get ob4image => const AssetGenImage('assets/pngs/ob4image.png');
-
-  /// File path: assets/pngs/onboarding_bg.png
-  AssetGenImage get onboardingBg =>
-      const AssetGenImage('assets/pngs/onboarding_bg.png');
-
-  /// File path: assets/pngs/pickup_icon.png
-  AssetGenImage get pickupIcon =>
-      const AssetGenImage('assets/pngs/pickup_icon.png');
-
-  /// File path: assets/pngs/splash_bg.png
-  AssetGenImage get splashBg =>
-      const AssetGenImage('assets/pngs/splash_bg.png');
-
-  /// File path: assets/pngs/welcome_bg.png
-  AssetGenImage get welcomeBg =>
-      const AssetGenImage('assets/pngs/welcome_bg.png');
+  /// File path: assets/pngs/splash_text.png
+  AssetGenImage get splashText =>
+      const AssetGenImage('assets/pngs/splash_text.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [
-        aboutImage,
-        aiYourVehicleBanner,
-        authBg,
-        bankUpdateImage,
-        bannerBg,
-        deliveryIcon,
-        enLangIcon,
-        grLangIcon,
-        loadBookingImg,
-        ob1image,
-        ob2image,
-        ob3image,
-        ob4image,
-        onboardingBg,
-        pickupIcon,
-        splashBg,
-        welcomeBg
+        destinationIcon,
+        fbIcon,
+        googleIcon,
+        originIcon,
+        premiumBadge,
+        splashText
       ];
 }
 
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
-  /// File path: assets/svgs/Bell.svg
-  SvgGenImage get bell => const SvgGenImage('assets/svgs/Bell.svg');
-
   /// File path: assets/svgs/about_icon.svg
   SvgGenImage get aboutIcon => const SvgGenImage('assets/svgs/about_icon.svg');
 
-  /// File path: assets/svgs/account_under_verification_icon.svg
-  SvgGenImage get accountUnderVerificationIcon =>
-      const SvgGenImage('assets/svgs/account_under_verification_icon.svg');
+  /// File path: assets/svgs/add_contact_icon.svg
+  SvgGenImage get addContactIcon =>
+      const SvgGenImage('assets/svgs/add_contact_icon.svg');
 
   /// File path: assets/svgs/app_logo.svg
   SvgGenImage get appLogo => const SvgGenImage('assets/svgs/app_logo.svg');
 
-  /// File path: assets/svgs/appointment_icon.svg
-  SvgGenImage get appointmentIcon =>
-      const SvgGenImage('assets/svgs/appointment_icon.svg');
+  /// File path: assets/svgs/back_icon.svg
+  SvgGenImage get backIcon => const SvgGenImage('assets/svgs/back_icon.svg');
 
-  /// File path: assets/svgs/call_icon.svg
-  SvgGenImage get callIcon => const SvgGenImage('assets/svgs/call_icon.svg');
+  /// File path: assets/svgs/calculator_icon.svg
+  SvgGenImage get calculatorIcon =>
+      const SvgGenImage('assets/svgs/calculator_icon.svg');
 
-  /// File path: assets/svgs/change_request.svg
-  SvgGenImage get changeRequest =>
-      const SvgGenImage('assets/svgs/change_request.svg');
+  /// File path: assets/svgs/calendar_icon.svg
+  SvgGenImage get calendarIcon =>
+      const SvgGenImage('assets/svgs/calendar_icon.svg');
+
+  /// File path: assets/svgs/clock_icon.svg
+  SvgGenImage get clockIcon => const SvgGenImage('assets/svgs/clock_icon.svg');
 
   /// File path: assets/svgs/close_icon.svg
   SvgGenImage get closeIcon => const SvgGenImage('assets/svgs/close_icon.svg');
 
-  /// File path: assets/svgs/commodity_icon.svg
-  SvgGenImage get commodityIcon =>
-      const SvgGenImage('assets/svgs/commodity_icon.svg');
+  /// File path: assets/svgs/delete_icon.svg
+  SvgGenImage get deleteIcon =>
+      const SvgGenImage('assets/svgs/delete_icon.svg');
 
-  /// File path: assets/svgs/confirm_booking.svg
-  SvgGenImage get confirmBooking =>
-      const SvgGenImage('assets/svgs/confirm_booking.svg');
+  /// File path: assets/svgs/forecast_icon.svg
+  SvgGenImage get forecastIcon =>
+      const SvgGenImage('assets/svgs/forecast_icon.svg');
 
-  /// File path: assets/svgs/delete_account.svg
-  SvgGenImage get deleteAccount =>
-      const SvgGenImage('assets/svgs/delete_account.svg');
+  /// File path: assets/svgs/help_icon.svg
+  SvgGenImage get helpIcon => const SvgGenImage('assets/svgs/help_icon.svg');
 
-  /// File path: assets/svgs/delivery_icon.svg
-  SvgGenImage get deliveryIcon =>
-      const SvgGenImage('assets/svgs/delivery_icon.svg');
+  /// File path: assets/svgs/humidity_icon.svg
+  SvgGenImage get humidityIcon =>
+      const SvgGenImage('assets/svgs/humidity_icon.svg');
 
-  /// File path: assets/svgs/doc_submitted_icon.svg
-  SvgGenImage get docSubmittedIcon =>
-      const SvgGenImage('assets/svgs/doc_submitted_icon.svg');
-
-  /// File path: assets/svgs/driver_icon.svg
-  SvgGenImage get driverIcon =>
-      const SvgGenImage('assets/svgs/driver_icon.svg');
-
-  /// File path: assets/svgs/dry_van_icon.svg
-  SvgGenImage get dryVanIcon =>
-      const SvgGenImage('assets/svgs/dry_van_icon.svg');
-
-  /// File path: assets/svgs/earnings_icon.svg
-  SvgGenImage get earningsIcon =>
-      const SvgGenImage('assets/svgs/earnings_icon.svg');
-
-  /// File path: assets/svgs/email.svg
-  SvgGenImage get email => const SvgGenImage('assets/svgs/email.svg');
-
-  /// File path: assets/svgs/en_lang_icon.svg
-  SvgGenImage get enLangIcon =>
-      const SvgGenImage('assets/svgs/en_lang_icon.svg');
-
-  /// File path: assets/svgs/faqs_icon.svg
-  SvgGenImage get faqsIcon => const SvgGenImage('assets/svgs/faqs_icon.svg');
-
-  /// File path: assets/svgs/filter_icon.svg
-  SvgGenImage get filterIcon =>
-      const SvgGenImage('assets/svgs/filter_icon.svg');
-
-  /// File path: assets/svgs/gr_lang_icon.svg
-  SvgGenImage get grLangIcon =>
-      const SvgGenImage('assets/svgs/gr_lang_icon.svg');
-
-  /// File path: assets/svgs/load_assigned_icon.svg
-  SvgGenImage get loadAssignedIcon =>
-      const SvgGenImage('assets/svgs/load_assigned_icon.svg');
-
-  /// File path: assets/svgs/load_booked_image.svg
-  SvgGenImage get loadBookedImage =>
-      const SvgGenImage('assets/svgs/load_booked_image.svg');
-
-  /// File path: assets/svgs/load_delivered_icon.svg
-  SvgGenImage get loadDeliveredIcon =>
-      const SvgGenImage('assets/svgs/load_delivered_icon.svg');
-
-  /// File path: assets/svgs/load_id_icon.svg
-  SvgGenImage get loadIdIcon =>
-      const SvgGenImage('assets/svgs/load_id_icon.svg');
-
-  /// File path: assets/svgs/load_paid_icon.svg
-  SvgGenImage get loadPaidIcon =>
-      const SvgGenImage('assets/svgs/load_paid_icon.svg');
-
-  /// File path: assets/svgs/load_recommended_icon.svg
-  SvgGenImage get loadRecommendedIcon =>
-      const SvgGenImage('assets/svgs/load_recommended_icon.svg');
+  /// File path: assets/svgs/location_icon.svg
+  SvgGenImage get locationIcon =>
+      const SvgGenImage('assets/svgs/location_icon.svg');
 
   /// File path: assets/svgs/logout_icon.svg
   SvgGenImage get logoutIcon =>
       const SvgGenImage('assets/svgs/logout_icon.svg');
 
-  /// File path: assets/svgs/manage_vehicle_icon.svg
-  SvgGenImage get manageVehicleIcon =>
-      const SvgGenImage('assets/svgs/manage_vehicle_icon.svg');
+  /// File path: assets/svgs/notification_icon.svg
+  SvgGenImage get notificationIcon =>
+      const SvgGenImage('assets/svgs/notification_icon.svg');
 
-  /// File path: assets/svgs/match_found_icon.svg
-  SvgGenImage get matchFoundIcon =>
-      const SvgGenImage('assets/svgs/match_found_icon.svg');
+  /// File path: assets/svgs/pin_icon.svg
+  SvgGenImage get pinIcon => const SvgGenImage('assets/svgs/pin_icon.svg');
 
-  /// File path: assets/svgs/menu_star_icon.svg
-  SvgGenImage get menuStarIcon =>
-      const SvgGenImage('assets/svgs/menu_star_icon.svg');
+  /// File path: assets/svgs/pressure_icon.svg
+  SvgGenImage get pressureIcon =>
+      const SvgGenImage('assets/svgs/pressure_icon.svg');
 
-  /// File path: assets/svgs/mile_icon.svg
-  SvgGenImage get mileIcon => const SvgGenImage('assets/svgs/mile_icon.svg');
+  /// File path: assets/svgs/profile_icon.svg
+  SvgGenImage get profileIcon =>
+      const SvgGenImage('assets/svgs/profile_icon.svg');
 
-  /// File path: assets/svgs/money_icon.svg
-  SvgGenImage get moneyIcon => const SvgGenImage('assets/svgs/money_icon.svg');
-
-  /// File path: assets/svgs/move_selection_right_icon.svg
-  SvgGenImage get moveSelectionRightIcon =>
-      const SvgGenImage('assets/svgs/move_selection_right_icon.svg');
-
-  /// File path: assets/svgs/nav_book_icon.svg
-  SvgGenImage get navBookIcon =>
-      const SvgGenImage('assets/svgs/nav_book_icon.svg');
-
-  /// File path: assets/svgs/nav_my_loads_icon.svg
-  SvgGenImage get navMyLoadsIcon =>
-      const SvgGenImage('assets/svgs/nav_my_loads_icon.svg');
-
-  /// File path: assets/svgs/nav_post_load_icon.svg
-  SvgGenImage get navPostLoadIcon =>
-      const SvgGenImage('assets/svgs/nav_post_load_icon.svg');
-
-  /// File path: assets/svgs/nav_request_icon.svg
-  SvgGenImage get navRequestIcon =>
-      const SvgGenImage('assets/svgs/nav_request_icon.svg');
-
-  /// File path: assets/svgs/onboard_img1.svg
-  SvgGenImage get onboardImg1 =>
-      const SvgGenImage('assets/svgs/onboard_img1.svg');
-
-  /// File path: assets/svgs/onboard_img2.svg
-  SvgGenImage get onboardImg2 =>
-      const SvgGenImage('assets/svgs/onboard_img2.svg');
-
-  /// File path: assets/svgs/onboard_img3.svg
-  SvgGenImage get onboardImg3 =>
-      const SvgGenImage('assets/svgs/onboard_img3.svg');
-
-  /// File path: assets/svgs/onboard_img4.svg
-  SvgGenImage get onboardImg4 =>
-      const SvgGenImage('assets/svgs/onboard_img4.svg');
-
-  /// File path: assets/svgs/onsite_scale_icon.svg
-  SvgGenImage get onsiteScaleIcon =>
-      const SvgGenImage('assets/svgs/onsite_scale_icon.svg');
-
-  /// File path: assets/svgs/operator_icon.svg
-  SvgGenImage get operatorIcon =>
-      const SvgGenImage('assets/svgs/operator_icon.svg');
-
-  /// File path: assets/svgs/own_vehicle_icon.svg
-  SvgGenImage get ownVehicleIcon =>
-      const SvgGenImage('assets/svgs/own_vehicle_icon.svg');
-
-  /// File path: assets/svgs/package_type_icon.svg
-  SvgGenImage get packageTypeIcon =>
-      const SvgGenImage('assets/svgs/package_type_icon.svg');
-
-  /// File path: assets/svgs/phone.svg
-  SvgGenImage get phone => const SvgGenImage('assets/svgs/phone.svg');
-
-  /// File path: assets/svgs/pickup_icon.svg
-  SvgGenImage get pickupIcon =>
-      const SvgGenImage('assets/svgs/pickup_icon.svg');
-
-  /// File path: assets/svgs/pod_approval_icon.svg
-  SvgGenImage get podApprovalIcon =>
-      const SvgGenImage('assets/svgs/pod_approval_icon.svg');
-
-  /// File path: assets/svgs/pod_doc_icon.svg
-  SvgGenImage get podDocIcon =>
-      const SvgGenImage('assets/svgs/pod_doc_icon.svg');
-
-  /// File path: assets/svgs/rate_per_mile_icon.svg
-  SvgGenImage get ratePerMileIcon =>
-      const SvgGenImage('assets/svgs/rate_per_mile_icon.svg');
-
-  /// File path: assets/svgs/rate_review_icon.svg
-  SvgGenImage get rateReviewIcon =>
-      const SvgGenImage('assets/svgs/rate_review_icon.svg');
-
-  /// File path: assets/svgs/reefer_icon.svg
-  SvgGenImage get reeferIcon =>
-      const SvgGenImage('assets/svgs/reefer_icon.svg');
-
-  /// File path: assets/svgs/reminder_icon.svg
-  SvgGenImage get reminderIcon =>
-      const SvgGenImage('assets/svgs/reminder_icon.svg');
-
-  /// File path: assets/svgs/reports_icon.svg
-  SvgGenImage get reportsIcon =>
-      const SvgGenImage('assets/svgs/reports_icon.svg');
-
-  /// File path: assets/svgs/request_submitted_image.svg
-  SvgGenImage get requestSubmittedImage =>
-      const SvgGenImage('assets/svgs/request_submitted_image.svg');
-
-  /// File path: assets/svgs/restroom_icon.svg
-  SvgGenImage get restroomIcon =>
-      const SvgGenImage('assets/svgs/restroom_icon.svg');
+  /// File path: assets/svgs/quote_icon.svg
+  SvgGenImage get quoteIcon => const SvgGenImage('assets/svgs/quote_icon.svg');
 
   /// File path: assets/svgs/settings_icon.svg
   SvgGenImage get settingsIcon =>
@@ -328,116 +127,42 @@ class $AssetsSvgsGen {
   /// File path: assets/svgs/share_icon.svg
   SvgGenImage get shareIcon => const SvgGenImage('assets/svgs/share_icon.svg');
 
-  /// File path: assets/svgs/shipping_icon.svg
-  SvgGenImage get shippingIcon =>
-      const SvgGenImage('assets/svgs/shipping_icon.svg');
+  /// File path: assets/svgs/sun_icon.svg
+  SvgGenImage get sunIcon => const SvgGenImage('assets/svgs/sun_icon.svg');
 
-  /// File path: assets/svgs/support_icon.svg
-  SvgGenImage get supportIcon =>
-      const SvgGenImage('assets/svgs/support_icon.svg');
+  /// File path: assets/svgs/swap_icon.svg
+  SvgGenImage get swapIcon => const SvgGenImage('assets/svgs/swap_icon.svg');
 
-  /// File path: assets/svgs/terms_icon.svg
-  SvgGenImage get termsIcon => const SvgGenImage('assets/svgs/terms_icon.svg');
-
-  /// File path: assets/svgs/trailor_icon.svg
-  SvgGenImage get trailorIcon =>
-      const SvgGenImage('assets/svgs/trailor_icon.svg');
-
-  /// File path: assets/svgs/transactions_icon.svg
-  SvgGenImage get transactionsIcon =>
-      const SvgGenImage('assets/svgs/transactions_icon.svg');
-
-  /// File path: assets/svgs/truck_posted_success.svg
-  SvgGenImage get truckPostedSuccess =>
-      const SvgGenImage('assets/svgs/truck_posted_success.svg');
-
-  /// File path: assets/svgs/view_on_map_icon.svg
-  SvgGenImage get viewOnMapIcon =>
-      const SvgGenImage('assets/svgs/view_on_map_icon.svg');
-
-  /// File path: assets/svgs/wallet_icon.svg
-  SvgGenImage get walletIcon =>
-      const SvgGenImage('assets/svgs/wallet_icon.svg');
-
-  /// File path: assets/svgs/weight_icon.svg
-  SvgGenImage get weightIcon =>
-      const SvgGenImage('assets/svgs/weight_icon.svg');
-
-  /// File path: assets/svgs/withdrawals_icon.svg
-  SvgGenImage get withdrawalsIcon =>
-      const SvgGenImage('assets/svgs/withdrawals_icon.svg');
+  /// File path: assets/svgs/temperature_icon.svg
+  SvgGenImage get temperatureIcon =>
+      const SvgGenImage('assets/svgs/temperature_icon.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
-        bell,
         aboutIcon,
-        accountUnderVerificationIcon,
+        addContactIcon,
         appLogo,
-        appointmentIcon,
-        callIcon,
-        changeRequest,
+        backIcon,
+        calculatorIcon,
+        calendarIcon,
+        clockIcon,
         closeIcon,
-        commodityIcon,
-        confirmBooking,
-        deleteAccount,
-        deliveryIcon,
-        docSubmittedIcon,
-        driverIcon,
-        dryVanIcon,
-        earningsIcon,
-        email,
-        enLangIcon,
-        faqsIcon,
-        filterIcon,
-        grLangIcon,
-        loadAssignedIcon,
-        loadBookedImage,
-        loadDeliveredIcon,
-        loadIdIcon,
-        loadPaidIcon,
-        loadRecommendedIcon,
+        deleteIcon,
+        forecastIcon,
+        helpIcon,
+        humidityIcon,
+        locationIcon,
         logoutIcon,
-        manageVehicleIcon,
-        matchFoundIcon,
-        menuStarIcon,
-        mileIcon,
-        moneyIcon,
-        moveSelectionRightIcon,
-        navBookIcon,
-        navMyLoadsIcon,
-        navPostLoadIcon,
-        navRequestIcon,
-        onboardImg1,
-        onboardImg2,
-        onboardImg3,
-        onboardImg4,
-        onsiteScaleIcon,
-        operatorIcon,
-        ownVehicleIcon,
-        packageTypeIcon,
-        phone,
-        pickupIcon,
-        podApprovalIcon,
-        podDocIcon,
-        ratePerMileIcon,
-        rateReviewIcon,
-        reeferIcon,
-        reminderIcon,
-        reportsIcon,
-        requestSubmittedImage,
-        restroomIcon,
+        notificationIcon,
+        pinIcon,
+        pressureIcon,
+        profileIcon,
+        quoteIcon,
         settingsIcon,
         shareIcon,
-        shippingIcon,
-        supportIcon,
-        termsIcon,
-        trailorIcon,
-        transactionsIcon,
-        truckPostedSuccess,
-        viewOnMapIcon,
-        walletIcon,
-        weightIcon,
-        withdrawalsIcon
+        sunIcon,
+        swapIcon,
+        temperatureIcon
       ];
 }
 
