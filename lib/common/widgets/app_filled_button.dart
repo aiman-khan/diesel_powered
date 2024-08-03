@@ -31,8 +31,8 @@ class AppFilledButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width?.w ?? 293.w,
-      height: height?.h ?? 45.h,
+      width: width?.w ?? 337.w,
+      height: height?.h ?? 50.h,
       decoration: BoxDecoration(
         color: color,
         gradient: LinearGradient(
@@ -41,7 +41,7 @@ class AppFilledButton extends StatelessWidget {
             color ?? R.colors.primary,
           ],
         ),
-        borderRadius: BorderRadius.circular(radius ?? 12.r),
+        borderRadius: BorderRadius.circular(radius ?? 50.r),
       ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
@@ -49,17 +49,17 @@ class AppFilledButton extends StatelessWidget {
           elevation: 2,
           backgroundColor: Colors.transparent,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(radius?.r ?? 12.r),
+            borderRadius: BorderRadius.circular(radius?.r ?? 50.r),
           ),
           foregroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           minimumSize: Size(
-            width?.w ?? 293.w,
-            height?.h ?? 48.h,
+            width?.w ?? 337.w,
+            height?.h ?? 50.h,
           ),
           maximumSize: Size(
-            width?.w ?? 293.w,
-            height?.h ?? 48.h,
+            width?.w ?? 337.w,
+            height?.h ?? 50.h,
           ),
         ),
         onPressed: onTap,
@@ -76,8 +76,8 @@ class AppFilledButton extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: textColor ?? R.colors.white,
-                    fontSize: textSize ?? 14.sp,
-                    fontWeight: FontWeight.w700,
+                    fontSize: textSize ?? 18.sp,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),

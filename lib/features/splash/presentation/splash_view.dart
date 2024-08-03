@@ -26,11 +26,12 @@ class _SplashViewState extends ConsumerState<SplashView> {
 
     if (!mounted) return;
 
-    if (!mounted) return;
-
     if (bearer == null) {
-      GoRouter.of(context).pushReplacement(RoutePaths.welcome);
+      GoRouter.of(context).pushReplacement(RoutePaths.login);
+      return;
     }
+
+    GoRouter.of(context).pushReplacement(RoutePaths.home);
   }
 
   @override
@@ -50,11 +51,11 @@ class _SplashViewState extends ConsumerState<SplashView> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 60.w),
+          padding: EdgeInsets.symmetric(horizontal: 110.w),
           child: SizedBox(
             child: Assets.pngs.splashText.image(
-              height: 70.h,
-              width: 270.w,
+              height: 170.h,
+              width: 154.w,
             ),
           ),
         ),

@@ -13,11 +13,11 @@ class CurrentUserUsecaseInput extends Input {
 }
 
 class CurrentUserUsecaseOutput extends Output {
-  CurrentUserUsecaseOutput({required UserEntity driver}) : _driver = driver;
+  CurrentUserUsecaseOutput({required UserEntity user}) : _user = user;
 
-  final UserEntity _driver;
+  final UserEntity _user;
 
-  UserModel get driver => UserModel.fromEntity(_driver);
+  UserModel get user => UserModel.fromEntity(_user);
 }
 
 @lazySingleton

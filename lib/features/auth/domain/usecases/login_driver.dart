@@ -6,11 +6,11 @@ import 'package:injectable/injectable.dart';
 
 class LoginDriverUsecaseInput extends Input {
   LoginDriverUsecaseInput({
-    required this.phone,
+    required this.email,
     required this.password,
   });
 
-  final String phone;
+  final String email;
   final String password;
 }
 

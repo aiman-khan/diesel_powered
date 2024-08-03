@@ -24,9 +24,9 @@ class CustomTextFormField extends StatelessWidget {
     this.onTap,
     this.minLine = 1,
     this.maxLines = 1,
-    this.radius = 10,
+    this.radius = 47,
     this.inputFormatters,
-    this.fillColor = Colors.white,
+    this.fillColor,
     this.textInputAction = TextInputAction.next,
     this.enabledBorderColor,
     this.focusedBorderColor,
@@ -102,7 +102,6 @@ class CustomTextFormField extends StatelessWidget {
             onEditingComplete: onEditingComplete,
             textInputAction: textInputAction,
             inputFormatters: inputFormatters,
-            obscuringCharacter: '●',
             focusNode: focusNode,
             style: TextStyle(
               color: textColor ?? R.colors.black,
@@ -119,9 +118,7 @@ class CustomTextFormField extends StatelessWidget {
               prefixIcon: prefixIcon,
               hintText: hintText,
               hintStyle: TextStyle(
-                color: !enabled
-                    ? R.colors.greyTextField.withOpacity(0.4)
-                    : R.colors.greyTextField,
+                color: R.colors.secondary.withOpacity(0.5),
                 fontSize: 14.sp,
                 letterSpacing: 0.12.w,
               ),
@@ -131,7 +128,7 @@ class CustomTextFormField extends StatelessWidget {
               ),
               errorMaxLines: 2,
               filled: true,
-              fillColor: fillColor ?? Colors.white,
+              fillColor: fillColor ?? R.colors.greyTextField,
               suffixIconConstraints: BoxConstraints(maxHeight: 24.r),
               prefixIconConstraints: BoxConstraints(maxHeight: 24.r),
               focusedErrorBorder: OutlineInputBorder(

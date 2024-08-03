@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class PasswordInputField extends StatefulWidget {
   const PasswordInputField({
     required this.onChanged,
-    required this.labelText,
+    this.labelText,
     required this.hintText,
     this.controller,
     this.validator,
@@ -20,7 +20,7 @@ class PasswordInputField extends StatefulWidget {
 
   final void Function(String?)? onChanged;
   final String? Function(String?)? validator;
-  final String labelText;
+  final String? labelText;
   final String hintText;
   final TextEditingController? controller;
   final FocusNode? focusNode;
@@ -61,7 +61,6 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
             return null;
           },
       onChanged: widget.onChanged,
-      fillColor: widget.fillColor,
       suffixIcon: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12.w),
         child: InkWell(

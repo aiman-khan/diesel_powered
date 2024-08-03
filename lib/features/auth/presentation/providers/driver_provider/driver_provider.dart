@@ -13,5 +13,5 @@ Future<UserModel?> driver(DriverRef ref) async {
 
   final input = CurrentUserUsecaseInput(bearer: bearer!);
   final output = await getUser(input);
-  return output.driver;
+  return output.user;
 }

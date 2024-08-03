@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
@@ -7,7 +6,6 @@ import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_ln
 import 'package:diesel_powered/features/google_maps/presentation/providers/request_location_permission_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/views/popups/allow_permission_popup.dart';
 import 'package:diesel_powered/gen/assets.gen.dart';
-import 'package:diesel_powered/util/consts/google_map_api_key.dart';
 import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:diesel_powered/util/toast/toast.dart';
@@ -78,12 +76,12 @@ class _RouteMapWidgetState extends ConsumerState<RouteMapWidget> {
     _requestLocationPermission();
     transparentMarker = await createTransparentMarker();
 
-    firstPointMarker = await BitmapDescriptor.fromAssetImage(
+    firstPointMarker = await BitmapDescriptor.asset(
       const ImageConfiguration(),
       Assets.pngs.originIcon.path,
     );
 
-    lastPointMarker = await BitmapDescriptor.fromAssetImage(
+    lastPointMarker = await BitmapDescriptor.asset(
       const ImageConfiguration(),
       Assets.pngs.destinationIcon.path,
     );
@@ -103,7 +101,7 @@ class _RouteMapWidgetState extends ConsumerState<RouteMapWidget> {
     final ByteData? byteData =
         await image.toByteData(format: ui.ImageByteFormat.png);
     final Uint8List byteDataList = byteData!.buffer.asUint8List();
-    return BitmapDescriptor.fromBytes(byteDataList);
+    return BitmapDescriptor.bytes(byteDataList);
   }
 
   Future<void> fitMarkersIntoView() async {

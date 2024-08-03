@@ -28,97 +28,32 @@ class AuthRemoteDataSourceImp implements AuthRemoteDataSource {
   @override
   Future<CurrentUserUsecaseOutput> currentUser(
       CurrentUserUsecaseInput input) async {
-    try {
-      _logger.i(input.toString());
-      final response = await _networkCallHelper.get(
-        Apis.currentUser,
-        headers: {
-          'Authorization': 'Bearer ${input.bearer}',
-        },
-      );
+    await Future.delayed(const Duration(seconds: 2));
 
-      _logger.i("Response: $response");
+    const user = RestUserEntity(
+      id: 1,
+      email: 'john@gmail.com',
+      name: 'John Doe',
+      phone: '+123823878832',
+      img: 'https://randomuser.me/api/portraits/men/1.jpg',
+    );
 
-      if (!(response["success"] as bool)) {
-        throw MessageException(message: response['message']);
-      }
-
-      return CurrentUserUsecaseOutput(
-          driver: RestUserEntity.fromJson(response['message']));
-    } on MessageException {
-      rethrow;
-    } catch (e) {
-      _logger.e("SOMETHING WENT WRONG AT currentUser: $e");
-      throw SomethingWentWrongException();
-    }
+    return CurrentUserUsecaseOutput(user: user);
   }
 
   @override
   Future<LoginDriverUsecaseOutput> login(LoginDriverUsecaseInput input) async {
-    try {
-      _logger.i(input.toString());
-      final response = await _networkCallHelper.post(
-        Apis.loginDriver,
-        {
-          "password": input.password,
-          "phone": input.phone,
-        },
-      );
+    await Future.delayed(const Duration(seconds: 2));
 
-      _logger.i("Response: $response");
-
-      if (!(response["success"] as bool)) {
-        throw MessageException(message: response['message']);
-      }
-
-      final token = response["token"] as String;
-
-      return LoginDriverUsecaseOutput(token: token);
-    } on MessageException {
-      rethrow;
-    } catch (e) {
-      _logger.e("SOMETHING WENT WRONG AT login: $e");
-      throw SomethingWentWrongException();
-    }
+    return LoginDriverUsecaseOutput(token: '1234');
   }
 
   @override
   Future<RegisterDriverUsecaseOutput> register(
       RegisterDriverUsecaseInput input) async {
-    try {
-      _logger.i(input.toString());
-      final response = await _networkCallHelper.post(
-        Apis.registerDriver,
-        {
-          "email": input.email,
-          "fullName": input.fullName,
-          "password": input.password,
-          "verificationToken": input.verificationToken,
-          "typeId": input.typeId,
-          "phone": input.phone,
-          "vehicleId": input.vehicleId,
-          "vehicleLicenseNo": input.vehicleLicenseNo,
-          "drivingLicenseNo": input.drivingLicenseNo,
-          "fleetId": input.fleetId,
-          "countryCode": input.countryCode,
-        },
-      );
+    await Future.delayed(const Duration(seconds: 2));
 
-      _logger.i("Response: $response");
-
-      if (!(response["success"] as bool)) {
-        throw MessageException(message: response['message']);
-      }
-
-      final token = response["token"] as String;
-
-      return RegisterDriverUsecaseOutput(token: token);
-    } on MessageException {
-      rethrow;
-    } catch (e) {
-      _logger.e("SOMETHING WENT WRONG AT register: $e");
-      throw SomethingWentWrongException();
-    }
+    return RegisterDriverUsecaseOutput(token: '1234');
   }
 
   /// [VerifyOtpUsecaseInput] is received to [verifyOtp] method as parameter

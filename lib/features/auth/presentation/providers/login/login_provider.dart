@@ -14,7 +14,7 @@ Future<void> login(LoginRef ref) async {
   final loginForm = ref.read(loginFormProvider);
   final input = LoginDriverUsecaseInput(
     password: loginForm.password!,
-    phone: loginForm.phone!,
+    email: loginForm.email!,
   );
 
   final output = await login(input);
