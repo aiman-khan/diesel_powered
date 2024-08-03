@@ -1,0 +1,1 @@
+enum AuthStepModel { register, resetPassword }
