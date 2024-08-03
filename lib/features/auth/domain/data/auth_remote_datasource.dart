@@ -11,8 +11,7 @@ import 'package:diesel_powered/infrastructure/datasource.dart';
 abstract class AuthRemoteDataSource extends DataSource {
   Future<LoginDriverUsecaseOutput> login(LoginDriverUsecaseInput input);
 
-  Future<RegisterDriverUsecaseOutput> register(
-      RegisterDriverUsecaseInput input);
+  Future<RegisterUsecaseOutput> register(RegisterUsecaseInput input);
 
   Future<CurrentUserUsecaseOutput> currentUser(CurrentUserUsecaseInput input);
 

@@ -19,7 +19,4 @@ Future<void> verifyOtp(VerifyOtpRef ref) async {
   );
 
   final output = await verifyOtp(input);
-  ref
-      .read(registerFormProvider.notifier)
-      .setVerificationToken(output.verificationToken);
 }

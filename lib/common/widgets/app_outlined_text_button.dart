@@ -29,14 +29,14 @@ class AppOutlinedTextButton extends StatelessWidget {
           ),
         ),
         minimumSize: MaterialStateProperty.all(
-          Size(width?.w ?? 293.w, height?.w ?? 45.h),
+          Size(width?.w ?? 293.w, height?.w ?? 50.h),
         ),
         maximumSize: MaterialStateProperty.all(
-          Size(width?.w ?? 293.w, height?.w ?? 45.h),
+          Size(width?.w ?? 293.w, height?.w ?? 50.h),
         ),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(50.r),
           ),
         ),
       ),

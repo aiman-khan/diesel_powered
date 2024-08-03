@@ -141,9 +141,8 @@ extension GetItInjectableX on _i174.GetIt {
             authRepository: gh<_i961.AuthRepository>()));
     gh.lazySingleton<_i358.LoginDriverUsecase>(() =>
         _i358.LoginDriverUsecase(authRepository: gh<_i961.AuthRepository>()));
-    gh.lazySingleton<_i159.RegisterDriverUsecase>(() =>
-        _i159.RegisterDriverUsecase(
-            authRepository: gh<_i961.AuthRepository>()));
+    gh.lazySingleton<_i159.RegisterUsecase>(() =>
+        _i159.RegisterUsecase(authRepository: gh<_i961.AuthRepository>()));
     gh.lazySingleton<_i1066.ResetPasswordUsecase>(() =>
         _i1066.ResetPasswordUsecase(
             authRepository: gh<_i961.AuthRepository>()));

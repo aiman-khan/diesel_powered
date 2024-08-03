@@ -37,10 +37,14 @@ class LogoutConfirmationPopup extends ConsumerWidget {
         padding: EdgeInsets.symmetric(horizontal: 14.w),
         child: Column(
           children: [
-            12.hb,
+            24.hb,
             Assets.svgs.logoutIcon.svg(
               height: 86.36.r,
               width: 86.36.r,
+              colorFilter: ColorFilter.mode(
+                R.colors.primary,
+                BlendMode.srcIn,
+              ),
             ),
             22.hb,
             AppText(
@@ -50,14 +54,13 @@ class LogoutConfirmationPopup extends ConsumerWidget {
               color: R.colors.black,
               textAlign: TextAlign.center,
             ),
-            49.hb,
+            32.hb,
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AppOutlinedTextButton(
                   width: 103,
                   height: 40,
-                  color: R.colors.blue,
                   text: 'Cancel',
                   onTap: () {
                     GoRouter.of(context).pop();
@@ -71,6 +74,7 @@ class LogoutConfirmationPopup extends ConsumerWidget {
                 ),
               ],
             ),
+            16.hb,
           ],
         ),
       ),

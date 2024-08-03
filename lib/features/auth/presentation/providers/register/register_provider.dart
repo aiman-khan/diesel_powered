@@ -9,23 +9,15 @@ part 'register_provider.g.dart';
 
 @riverpod
 Future<void> register(Ref ref) async {
-  final register = sl<RegisterDriverUsecase>();
+  final register = sl<RegisterUsecase>();
   final saveAuth = sl<SaveAuthUsecase>();
 
   final registerForm = ref.read(registerFormProvider);
-  final input = RegisterDriverUsecaseInput(
-    password: registerForm.password!,
-    email: registerForm.email!,
-    fullName: registerForm.name!,
-    phone: registerForm.phone!,
-    vehicleLicenseNo: registerForm.vehicleLicenseNumber,
-    vehicleId: registerForm.vehicleId,
-    drivingLicenseNo: registerForm.drivingLicenseNumber,
-    verificationToken: registerForm.verificationToken!,
-    typeId: registerForm.typeId!,
-    fleetId: registerForm.fleetId,
-    countryCode: registerForm.countryCode!,
-  );
+  final input = RegisterUsecaseInput(
+      password: registerForm.password!,
+      email: registerForm.email!,
+      fullName: registerForm.name!,
+      phone: '8781979878');
 
   final output = await register(input);
 

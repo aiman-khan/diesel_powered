@@ -63,13 +63,13 @@ class _RegisterViewState extends ConsumerState<SignUpView> {
   Future<void> _signUp() async {
     FocusManager.instance.primaryFocus?.unfocus();
 
-    if (loginValid && _formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) {
       try {
         loading(context);
         await ref.read(registerProvider.future);
         if (!mounted) return;
 
-        GoRouter.of(context).push(RoutePaths.otpVerification);
+        GoRouter.of(context).push(RoutePaths.home);
       } on MessageException catch (e) {
         showToast(msg: e.message);
       } catch (e) {
@@ -78,8 +78,6 @@ class _RegisterViewState extends ConsumerState<SignUpView> {
       } finally {
         dismissLoading();
       }
-    } else {
-      showToast(msg: 'Please enter a valid phone number');
     }
   }
 

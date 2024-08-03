@@ -31,8 +31,7 @@ class AuthRepositoryImp implements AuthRepository {
   }
 
   @override
-  Future<RegisterDriverUsecaseOutput> register(
-      RegisterDriverUsecaseInput input) async {
+  Future<RegisterUsecaseOutput> register(RegisterUsecaseInput input) async {
     return _authRemoteDataSource.register(input);
   }
 

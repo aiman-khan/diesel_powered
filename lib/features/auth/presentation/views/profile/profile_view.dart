@@ -3,6 +3,7 @@ import 'package:diesel_powered/common/widgets/app_text.dart';
 import 'package:diesel_powered/common/widgets/user_avatar.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/driver_provider/driver_provider.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
+import 'package:diesel_powered/features/home/presentation/views/dialogs/logout_confirmation_dialog.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_camera_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_gallery_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/request_camera_permission_provider.dart';
@@ -212,7 +213,14 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
               name: 'Logout',
               icon: Assets.svgs.logoutIcon.svg(),
               color: R.colors.warningRed,
-              onTap: () {},
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return const LogoutConfirmationPopup();
+                  },
+                );
+              },
             ),
           ],
         ),

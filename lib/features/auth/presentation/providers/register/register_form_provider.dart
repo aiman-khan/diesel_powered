@@ -25,34 +25,6 @@ class RegisterForm extends _$RegisterForm {
     state = state.copyWith(phone: phone);
   }
 
-  void setVehicleId(int vehicleId) {
-    state = state.copyWith(vehicleId: vehicleId);
-  }
-
-  void setVehicleLicenseNumber(String vehicleLicenseNumber) {
-    state = state.copyWith(vehicleLicenseNumber: vehicleLicenseNumber);
-  }
-
-  void setDrivingLicenseNumber(String drivingLicenseNumber) {
-    state = state.copyWith(drivingLicenseNumber: drivingLicenseNumber);
-  }
-
-  void setVerificationToken(String verificationToken) {
-    state = state.copyWith(verificationToken: verificationToken);
-  }
-
-  void setFleetId(int fleetId) {
-    state = state.copyWith(fleetId: fleetId);
-  }
-
-  void setTypeId(int typeId) {
-    state = state.copyWith(typeId: typeId);
-  }
-
-  void setCountryCode(String countryCode) {
-    state = state.copyWith(countryCode: countryCode);
-  }
-
   @override
   RegisterFormModel build() {
     return RegisterFormModel.initial();

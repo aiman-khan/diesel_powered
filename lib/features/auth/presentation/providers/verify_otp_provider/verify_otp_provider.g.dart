@@ -6,7 +6,7 @@ part of 'verify_otp_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$verifyOtpHash() => r'73939c8417f070d2ef409b6da3eb0194f06f6aa4';
+String _$verifyOtpHash() => r'12acb814c81df448c6ad56e22e62052d8c4f7dae';
 
 /// See also [verifyOtp].
 @ProviderFor(verifyOtp)

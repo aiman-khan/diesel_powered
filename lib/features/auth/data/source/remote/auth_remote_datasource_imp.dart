@@ -49,15 +49,12 @@ class AuthRemoteDataSourceImp implements AuthRemoteDataSource {
   }
 
   @override
-  Future<RegisterDriverUsecaseOutput> register(
-      RegisterDriverUsecaseInput input) async {
+  Future<RegisterUsecaseOutput> register(RegisterUsecaseInput input) async {
     await Future.delayed(const Duration(seconds: 2));
 
-    return RegisterDriverUsecaseOutput(token: '1234');
+    return RegisterUsecaseOutput(token: '1234');
   }
 
-  /// [VerifyOtpUsecaseInput] is received to [verifyOtp] method as parameter
-  /// [VerifyOtpUsecaseOutput] is returned from [verifyOtp] method
   @override
   Future<VerifyOtpUsecaseOutput> verifyOtp(VerifyOtpUsecaseInput input) async {
     try {
@@ -145,8 +142,6 @@ class AuthRemoteDataSourceImp implements AuthRemoteDataSource {
     }
   }
 
-  /// [InitiateResetPasswordVerificationUsecaseInput] is received to [resetPasswordInitiateVerification] method as parameter
-  /// [InitiateResetPasswordVerificationUsecaseOutput] is returned from [resetPasswordInitiateVerification] method
   @override
   Future<InitiateResetPasswordVerificationUsecaseOutput>
       resetPasswordInitiateVerification(

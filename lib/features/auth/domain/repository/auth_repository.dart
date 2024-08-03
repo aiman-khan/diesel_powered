@@ -14,8 +14,7 @@ import 'package:diesel_powered/infrastructure/repository.dart';
 abstract class AuthRepository extends Repository {
   Future<LoginDriverUsecaseOutput> login(LoginDriverUsecaseInput input);
 
-  Future<RegisterDriverUsecaseOutput> register(
-      RegisterDriverUsecaseInput input);
+  Future<RegisterUsecaseOutput> register(RegisterUsecaseInput input);
 
   Future<SaveAuthUsecaseOutput> saveAuth(SaveAuthUsecaseInput input);
 
