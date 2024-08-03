@@ -4,7 +4,7 @@ import 'package:diesel_powered/features/about/presentation/views/terms_of_servic
 import 'package:diesel_powered/features/auth/presentation/views/forget_password/forgot_password_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/login/login_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/otp_verification/otp_verification_view.dart';
-import 'package:diesel_powered/features/auth/presentation/views/profile_update/profile_update_view.dart';
+import 'package:diesel_powered/features/auth/presentation/views/profile/profile_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/register/sign_up_view.dart';
 import 'package:diesel_powered/features/auth/presentation/views/reset_password/reset_password.dart';
 import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_lng_model.dart';

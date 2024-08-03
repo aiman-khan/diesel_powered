@@ -1,9 +1,8 @@
 import 'package:diesel_powered/common/extensions/num.dart';
 import 'package:diesel_powered/common/widgets/app_exit_dialog.dart';
-import 'package:diesel_powered/features/auth/presentation/views/profile_update/profile_update_view.dart';
+import 'package:diesel_powered/features/auth/presentation/views/profile/profile_view.dart';
 import 'package:diesel_powered/features/home/domain/enums/bottom_nav_item.dart';
 import 'package:diesel_powered/features/home/presentation/providers/selected_nav_item_provider/selected_nav_item_provider.dart';
-import 'package:diesel_powered/features/home/presentation/views/widgets/bottom_bar/notch_bottom_bar_controller.dart';
 import 'package:diesel_powered/features/home/presentation/views/widgets/bottom_nav_bar.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +16,6 @@ class HomeView extends ConsumerStatefulWidget {
 }
 
 class _HomeViewState extends ConsumerState<HomeView> {
-  double leftPosition = 0;
-  final bottomBarController = NotchBottomBarController();
-
   Widget view(BottomNavItem currentView) {
     if (currentView.isLocation) return const SizedBox();
     if (currentView.isCalendar) return const SizedBox();
@@ -59,7 +55,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
             ref
                 .read(selectedNavItemProvider.notifier)
                 .update((state) => BottomNavItem.calculator);
-            bottomBarController.jumpTo(0);
           } else {
             onWillPop(context);
           }
@@ -67,8 +62,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
         canPop: false,
         child: Scaffold(
           extendBody: true,
-          bottomNavigationBar:
-              AppBottomNavBar(bottomBarController: bottomBarController),
+          bottomNavigationBar: const AppBottomNavBar(),
           body: Padding(
             padding: EdgeInsets.only(
               top: mediaQueryPadding.top,

@@ -18,6 +18,7 @@ class AppText extends ConsumerStatefulWidget {
     this.maxLines,
     this.decorationColor,
     this.height,
+    this.letterSpacing,
   });
 
   final String text;
@@ -32,6 +33,7 @@ class AppText extends ConsumerStatefulWidget {
   final int? maxLines;
   final Color? decorationColor;
   final double? height;
+  final double? letterSpacing;
 
   @override
   ConsumerState createState() => _AppTextState();
@@ -50,6 +52,7 @@ class _AppTextState extends ConsumerState<AppText> {
         decoration: widget.textDecoration ?? TextDecoration.none,
         decorationColor: widget.decorationColor,
         height: widget.height,
+        letterSpacing: widget.letterSpacing,
       ),
       textAlign: widget.textAlign,
       textDirection: widget.textDirection ?? TextDirection.ltr,

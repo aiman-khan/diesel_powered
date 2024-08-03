@@ -5,7 +5,6 @@ import 'package:diesel_powered/common/widgets/phone_input/countries.dart';
 import 'package:diesel_powered/common/widgets/phone_input/country_picker_dialog.dart';
 import 'package:diesel_powered/common/widgets/phone_input/intl_phone_field.dart';
 import 'package:diesel_powered/common/widgets/phone_input/phone_number.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/show_error_message_provider/show_error_message_provider.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,8 +33,6 @@ class PhoneNumberInputField extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final showErrorMessage = ref.watch(showErrorMessageProvider);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

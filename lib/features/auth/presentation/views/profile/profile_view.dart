@@ -1,5 +1,6 @@
 import 'package:diesel_powered/common/extensions/num.dart';
 import 'package:diesel_powered/common/widgets/app_filled_button.dart';
+import 'package:diesel_powered/common/widgets/app_text.dart';
 import 'package:diesel_powered/common/widgets/back_button_widget.dart';
 import 'package:diesel_powered/common/widgets/email_input_field.dart';
 import 'package:diesel_powered/common/widgets/name_input_field.dart';
@@ -7,54 +8,32 @@ import 'package:diesel_powered/common/widgets/phone_number_input_field.dart';
 import 'package:diesel_powered/common/widgets/user_avatar.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/driver_provider/driver_provider.dart';
 import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/views/profile_update/popups/delete_account_popup.dart';
+import 'package:diesel_powered/features/auth/presentation/views/profile/popups/delete_account_popup.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_camera_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/get_gallery_image_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/request_camera_permission_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/providers/request_storage_permission_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/views/popups/allow_permission_popup.dart';
 import 'package:diesel_powered/features/image_picker/presentation/views/popups/image_picker_popup.dart';
+import 'package:diesel_powered/features/premium/presentation/views/widgets/get_premium_card_widget.dart';
 import 'package:diesel_powered/gen/assets.gen.dart';
 import 'package:diesel_powered/util/exceptions/message_exception.dart';
+import 'package:diesel_powered/util/resources/r.dart';
 import 'package:diesel_powered/util/toast/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
-class ProfileView extends ConsumerWidget {
+class ProfileView extends ConsumerStatefulWidget {
   const ProfileView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              BackButtonWidget(
-                title: 'Profile',
-              ),
-              12.hb,
-              const Flexible(
-                child: ProfileItemsWidget(),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  ConsumerState<ProfileView> createState() => _ProfileViewState();
 }
 
-class ProfileItemsWidget extends ConsumerStatefulWidget {
-  const ProfileItemsWidget({super.key});
-
-  @override
-  ConsumerState<ProfileItemsWidget> createState() => _ProfileItemsWidgetState();
-}
-
-class _ProfileItemsWidgetState extends ConsumerState<ProfileItemsWidget> {
+class _ProfileViewState extends ConsumerState<ProfileView> {
   final formKey = GlobalKey<FormState>();
 
   final nameController = TextEditingController();
@@ -196,88 +175,110 @@ class _ProfileItemsWidgetState extends ConsumerState<ProfileItemsWidget> {
 
               /// [User Image]
               /// [Edit profile picture]
-              Stack(
-                children: [
-                  Stack(
-                    children: [
-                      Consumer(
-                        builder: (context, ref, _) {
-                          final userAsync = ref.watch(driverProvider);
+              Consumer(builder: (context, ref, _) {
+                final userAsync = ref.watch(driverProvider);
 
-                          if (!userAsync.hasValue) {
-                            return const SizedBox();
-                          }
+                if (!userAsync.hasValue) {
+                  return const SizedBox();
+                }
 
-                          final user = userAsync.value;
-                          return UserProfileAvatar(
-                            image: user!.img,
-                          );
-                        },
-                      ),
-                      Positioned(
-                        right: 0,
-                        top: 0,
-                        child: InkWell(
-                          onTap: () => _onTapEditAvatar(),
-                          child: CircleAvatar(
-                            radius: 18.r,
-                            child: Assets.svgs.settingsIcon.svg(),
-                          ),
+                final user = userAsync.value;
+                return Column(
+                  children: [
+                    Stack(
+                      children: [
+                        UserProfileAvatar(
+                          image: user!.img,
+                          size: 82.r,
                         ),
-                      )
-                    ],
-                  ),
-                ],
+                        // Positioned(
+                        //   right: 0,
+                        //   bottom: 0,
+                        //   child: Assets.svgs.tickIcon.svg(
+                        //     height: 12.r,
+                        //   ),
+                        // )
+                      ],
+                    ),
+                    16.hb,
+                    AppText(
+                      text: user.name,
+                      color: R.colors.secondary,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                    ),
+                    2.hb,
+                    AppText(
+                      text: user.email,
+                      color: R.colors.secondary.withOpacity(0.5),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    )
+                  ],
+                );
+              }),
+
+              24.hb,
+
+              const GetPremiumCardWidget(),
+
+              29.hb,
+
+              _buildSettingTile(
+                name: 'Contact List',
+                icon: Assets.svgs.addContactIcon.svg(),
+                onTap: () {},
               ),
 
-              62.hb,
-
-              NameInputField(
-                onChanged: (v) {},
-                controller: nameController,
-                hintText: 'John Doe',
+              _buildSettingTile(
+                name: 'Quotes',
+                icon: Assets.svgs.quoteIcon.svg(),
+                onTap: () {},
               ),
 
-              15.hb,
-
-              EmailInputField(
-                onChanged: (v) {},
-                hintText: 'abc@xyz.com',
-                controller: emailController,
+              _buildSettingTile(
+                name: 'Help Center',
+                icon: Assets.svgs.helpIcon.svg(),
+                onTap: () {},
               ),
-
-              15.hb,
-
-              PhoneNumberInputField(
-                onChanged: (v) {},
-                controller: phoneNumberController,
+              _buildSettingTile(
+                name: 'Settings',
+                icon: Assets.svgs.settingsIcon.svg(),
+                onTap: () {},
               ),
-
-              15.hb,
-
-              AppFilledButton(
-                width: 337,
-                text: 'Update',
-                onTap: _update,
+              _buildSettingTile(
+                name: 'Logout',
+                icon: Assets.svgs.logoutIcon.svg(),
+                color: R.colors.warningRed,
+                onTap: () {},
               ),
-
-              17.hb,
-              AppFilledButton(
-                width: 337,
-                text: 'Delete My Account',
-                onTap: () {
-                  showDialog<void>(
-                    context: context,
-                    builder: (context) {
-                      return const DeleteAccountPopup();
-                    },
-                  );
-                },
-              ),
-
-              12.hb,
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSettingTile({
+    required String name,
+    required SvgPicture icon,
+    required VoidCallback onTap,
+    Color? color,
+  }) {
+    return ListTile(
+      leading: icon,
+      minLeadingWidth: 0,
+      title: AppText(
+        text: name,
+        fontSize: 16,
+        color: color ?? R.colors.secondary,
+      ),
+      trailing: InkWell(
+        onTap: onTap,
+        child: Icon(
+          Icons.chevron_right,
+          size: 24.r,
+          color: color ?? R.colors.secondary,
         ),
       ),
     );

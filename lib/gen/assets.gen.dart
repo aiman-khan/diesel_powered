@@ -137,6 +137,9 @@ class $AssetsSvgsGen {
   SvgGenImage get temperatureIcon =>
       const SvgGenImage('assets/svgs/temperature_icon.svg');
 
+  /// File path: assets/svgs/tick_icon.svg
+  SvgGenImage get tickIcon => const SvgGenImage('assets/svgs/tick_icon.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         aboutIcon,
@@ -162,7 +165,8 @@ class $AssetsSvgsGen {
         shareIcon,
         sunIcon,
         swapIcon,
-        temperatureIcon
+        temperatureIcon,
+        tickIcon
       ];
 }
 
