@@ -21,6 +21,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shimmer/shimmer.dart';
 
 class ProfileView extends ConsumerStatefulWidget {
   const ProfileView({super.key});
@@ -143,7 +144,37 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
               final userAsync = ref.watch(userProvider);
 
               if (!userAsync.hasValue) {
-                return const SizedBox();
+                return Column(
+                  children: [
+                    Shimmer.fromColors(
+                      highlightColor: Colors.grey.shade100,
+                      baseColor: Colors.grey.shade300,
+                      child: CircleAvatar(
+                        radius: 42.r,
+                      ),
+                    ),
+                    16.hb,
+                    Shimmer.fromColors(
+                      highlightColor: Colors.grey.shade100,
+                      baseColor: Colors.grey.shade300,
+                      child: Container(
+                        height: 12.h,
+                        width: 100.w,
+                        color: R.colors.black,
+                      ),
+                    ),
+                    16.hb,
+                    Shimmer.fromColors(
+                      highlightColor: Colors.grey.shade100,
+                      baseColor: Colors.grey.shade300,
+                      child: Container(
+                        height: 10.h,
+                        width: 100.w,
+                        color: R.colors.black,
+                      ),
+                    ),
+                  ],
+                );
               }
 
               final user = userAsync.value;
@@ -155,13 +186,13 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                         image: user!.img,
                         size: 82.r,
                       ),
-                      // Positioned(
-                      //   right: 0,
-                      //   bottom: 0,
-                      //   child: Assets.svgs.tickIcon.svg(
-                      //     height: 12.r,
-                      //   ),
-                      // )
+                      Positioned(
+                        right: 6.w,
+                        bottom: 2.h,
+                        child: Assets.svgs.tickIcon.svg(
+                          height: 12.r,
+                        ),
+                      )
                     ],
                   ),
                   16.hb,
