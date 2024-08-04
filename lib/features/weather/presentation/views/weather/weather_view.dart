@@ -3,6 +3,7 @@ import 'package:diesel_powered/common/widgets/app_text.dart';
 import 'package:diesel_powered/features/google_maps/domain/models/location/location_model.dart';
 import 'package:diesel_powered/features/google_maps/presentation/providers/request_location_permission_provider.dart';
 import 'package:diesel_powered/features/image_picker/presentation/views/popups/allow_permission_popup.dart';
+import 'package:diesel_powered/features/weather/presentation/providers/get_current_weather_provider.dart';
 import 'package:diesel_powered/features/weather/presentation/providers/user_current_location_provider.dart';
 import 'package:diesel_powered/gen/assets.gen.dart';
 import 'package:diesel_powered/util/exceptions/message_exception.dart';
@@ -72,14 +73,25 @@ class _WeatherViewState extends ConsumerState<WeatherView> {
     ref.read(userCurrentLocationProvider.notifier).state = location;
   }
 
+  getCurrentWeather() async {
+    try {
+      await ref.read(getCurrentWeatherProvider.future);
+    } catch (e) {
+      showToast(msg: 'Something went wrong $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const AppText(
-          text: 'Weather Update',
-          fontWeight: FontWeight.w600,
-          fontSize: 18,
+        InkWell(
+          onTap: getCurrentWeather,
+          child: const AppText(
+            text: 'Weather Update',
+            fontWeight: FontWeight.w600,
+            fontSize: 18,
+          ),
         ),
         32.hb,
         Expanded(
@@ -89,48 +101,58 @@ class _WeatherViewState extends ConsumerState<WeatherView> {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Column(
                 children: [
-                  Container(
-                    height: 96.h,
-                    padding: EdgeInsets.symmetric(horizontal: 28.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.r),
-                      gradient: LinearGradient(
-                        colors: [
-                          R.colors.primary,
-                          R.colors.primary,
-                        ],
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 64.r,
-                          width: 64.r,
-                          child: Assets.pngs.premiumBadge.image(),
-                        ),
-                        16.wb,
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            AppText(
-                              text: 'Get Premium Today',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: R.colors.white,
-                              letterSpacing: 0.08,
-                            ),
-                            AppText(
-                              text: 'Remove Ads & Unlock All Feature',
-                              color: R.colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+                  // Consumer(builder: (context, ref, _) {
+                  //   final weatherAsync = ref.watch(getCurrentWeatherProvider);
+
+                  //   if (!weatherAsync.hasValue) {
+                  //     return CircularProgressIndicator();
+                  //   }
+
+                  //   final weather = weatherAsync.value;
+
+                  //   return Container(
+                  //     height: 96.h,
+                  //     padding: EdgeInsets.symmetric(horizontal: 28.w),
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(10.r),
+                  //       gradient: LinearGradient(
+                  //         colors: [
+                  //           R.colors.primary,
+                  //           R.colors.primary,
+                  //         ],
+                  //       ),
+                  //     ),
+                  //     child: Row(
+                  //       mainAxisAlignment: MainAxisAlignment.start,
+                  //       children: [
+                  //         SizedBox(
+                  //           height: 64.r,
+                  //           width: 64.r,
+                  //           child: Assets.pngs.premiumBadge.image(),
+                  //         ),
+                  //         16.wb,
+                  //         Column(
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           mainAxisAlignment: MainAxisAlignment.center,
+                  //           children: [
+                  //             AppText(
+                  //               text: weather?.description ?? '',
+                  //               fontSize: 20,
+                  //               fontWeight: FontWeight.w600,
+                  //               color: R.colors.white,
+                  //               letterSpacing: 0.08,
+                  //             ),
+                  //             AppText(
+                  //               text: 'Remove Ads & Unlock All Feature',
+                  //               color: R.colors.white,
+                  //               fontWeight: FontWeight.w500,
+                  //             ),
+                  //           ],
+                  //         )
+                  //       ],
+                  //     ),
+                  //   );
+                  // }),
                 ],
               ),
             ),

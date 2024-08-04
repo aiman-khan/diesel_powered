@@ -6,7 +6,13 @@ import 'package:diesel_powered/infrastructure/usecase_output.dart';
 import 'package:injectable/injectable.dart';
 
 class GetCurrentWeatherUsecaseInput extends Input {
-  GetCurrentWeatherUsecaseInput();
+  GetCurrentWeatherUsecaseInput({
+    required this.lat,
+    required this.lng,
+  });
+
+  final double lat;
+  final double lng;
 }
 
 class GetCurrentWeatherUsecaseOutput extends Output {
