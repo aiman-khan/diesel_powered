@@ -1,4 +1,5 @@
 import 'package:diesel_powered/common/extensions/num.dart';
+import 'package:diesel_powered/gen/assets.gen.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,31 +27,30 @@ class BackButtonWidget extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: Padding(
         padding: EdgeInsets.only(left: 12.w, top: 8.h, right: 12.w),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(66.r),
-          radius: 55,
-          onTap: onTap ?? () => GoRouter.of(context).pop(),
-          child: SizedBox(
-            width: 100.w,
-            child: Row(
-              children: [
-                Icon(
-                  Icons.chevron_left,
-                  size: 28.r,
-                  color: color ?? R.colors.primary,
-                ),
-                9.26.wb,
-                Text(
-                  'Back',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: color ?? R.colors.primary,
-                    fontSize: 15.sp,
-                  ),
-                ),
-              ],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            InkWell(
+              borderRadius: BorderRadius.circular(66.r),
+              radius: 55,
+              onTap: onTap ?? () => GoRouter.of(context).pop(),
+              child: SizedBox(
+                height: 32.r,
+                width: 32.r,
+                child: Assets.svgs.backIcon.svg(),
+              ),
             ),
-          ),
+            if (title != null)
+              Text(
+                title!,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  color: color ?? R.colors.secondary,
+                  fontSize: 18.sp,
+                ),
+              ),
+            32.wb,
+          ],
         ),
       ),
     );

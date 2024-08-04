@@ -11,6 +11,7 @@ import 'package:diesel_powered/features/google_maps/domain/models/lat_lng/lat_ln
 import 'package:diesel_powered/features/google_maps/presentation/views/search_location.dart';
 import 'package:diesel_powered/features/google_maps/presentation/views/view_location.dart';
 import 'package:diesel_powered/features/home/presentation/views/home_view.dart';
+import 'package:diesel_powered/features/quote/presentation/views/quotes/quotes_view.dart';
 import 'package:diesel_powered/features/splash/presentation/splash_view.dart';
 import 'package:diesel_powered/util/router/paths.dart';
 import 'package:go_router/go_router.dart';
@@ -60,7 +61,7 @@ final router = GoRouter(
       },
     ),
     GoRoute(
-      path: RoutePaths.updateProfile,
+      path: RoutePaths.profile,
       builder: (context, state) {
         return const ProfileView();
       },
@@ -94,6 +95,12 @@ final router = GoRouter(
       path: RoutePaths.searchLocation,
       builder: (context, state) {
         return const SearchLocation();
+      },
+    ),
+    GoRoute(
+      path: RoutePaths.quotes,
+      builder: (context, state) {
+        return const QuotesView();
       },
     ),
   ],

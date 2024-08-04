@@ -1,5 +1,5 @@
 abstract class NetworkCallHelper {
-  Future<Map<String, dynamic>> get(
+  Future<dynamic> get(
     String url, {
     Map<String, dynamic>? params,
     Map<String, String>? headers,
@@ -19,4 +19,3 @@ abstract class NetworkCallHelper {
     Map<String, String>? headers,
   });
 }
-

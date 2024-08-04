@@ -14,6 +14,7 @@ import 'package:diesel_powered/features/premium/presentation/views/widgets/get_p
 import 'package:diesel_powered/gen/assets.gen.dart';
 import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:diesel_powered/util/resources/r.dart';
+import 'package:diesel_powered/util/router/paths.dart';
 import 'package:diesel_powered/util/toast/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -196,7 +197,9 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
             _buildSettingTile(
               name: 'Quotes',
               icon: Assets.svgs.quoteIcon.svg(),
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(RoutePaths.quotes);
+              },
             ),
 
             _buildSettingTile(
@@ -235,6 +238,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     Color? color,
   }) {
     return ListTile(
+      onTap: onTap,
       leading: icon,
       minLeadingWidth: 0,
       title: AppText(
@@ -242,13 +246,10 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
         fontSize: 16,
         color: color ?? R.colors.secondary,
       ),
-      trailing: InkWell(
-        onTap: onTap,
-        child: Icon(
-          Icons.chevron_right,
-          size: 24.r,
-          color: color ?? R.colors.secondary,
-        ),
+      trailing: Icon(
+        Icons.chevron_right,
+        size: 24.r,
+        color: color ?? R.colors.secondary,
       ),
     );
   }

@@ -12,7 +12,7 @@ class HttpNetworkCallHelperImpl implements NetworkCallHelper {
   HttpNetworkCallHelperImpl({required this.logger});
 
   @override
-  Future<Map<String, dynamic>> get(String url,
+  Future<dynamic> get(String url,
       {Map<String, dynamic>? params, Map<String, String>? headers}) async {
     if (params != null) {
       final query = params.entries
@@ -26,7 +26,7 @@ class HttpNetworkCallHelperImpl implements NetworkCallHelper {
 
     final body = response.body;
     final jsonBody = json.decode(body);
-    return jsonBody as Map<String, dynamic>;
+    return jsonBody;
   }
 
   @override
