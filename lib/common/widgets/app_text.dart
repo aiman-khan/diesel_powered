@@ -52,7 +52,7 @@ class _AppTextState extends ConsumerState<AppText> {
         decoration: widget.textDecoration ?? TextDecoration.none,
         decorationColor: widget.decorationColor,
         height: widget.height,
-        letterSpacing: widget.letterSpacing,
+        letterSpacing: widget.letterSpacing ?? 0.08,
       ),
       textAlign: widget.textAlign,
       textDirection: widget.textDirection ?? TextDirection.ltr,

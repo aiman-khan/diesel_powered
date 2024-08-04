@@ -4,6 +4,7 @@ import 'package:diesel_powered/features/auth/presentation/views/profile/profile_
 import 'package:diesel_powered/features/home/domain/enums/bottom_nav_item.dart';
 import 'package:diesel_powered/features/home/presentation/providers/selected_nav_item_provider/selected_nav_item_provider.dart';
 import 'package:diesel_powered/features/home/presentation/views/widgets/bottom_nav_bar.dart';
+import 'package:diesel_powered/features/weather/presentation/views/weather/weather_view.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -20,7 +21,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
     if (currentView.isLocation) return const SizedBox();
     if (currentView.isCalendar) return const SizedBox();
     if (currentView.isCalculator) return const SizedBox();
-    if (currentView.isWeather) return const SizedBox();
+    if (currentView.isWeather) return const WeatherView();
     if (currentView.isProfile) return const ProfileView();
 
     return const SizedBox();
