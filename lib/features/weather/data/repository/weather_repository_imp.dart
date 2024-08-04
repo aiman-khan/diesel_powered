@@ -3,7 +3,7 @@ import 'package:diesel_powered/features/weather/domain/repository/weather_reposi
 import 'package:diesel_powered/features/weather/domain/usecases/get_current_weather_usecase.dart';
 import 'package:injectable/injectable.dart';
 
-@LazySingleton(as: WeatherRepositoryImp)
+@LazySingleton(as: WeatherRepository)
 class WeatherRepositoryImp implements WeatherRepository {
   final WeatherRemoteDataSource _weatherRemoteDataSource;
 
