@@ -1,11 +1,8 @@
 import 'package:diesel_powered/common/extensions/num.dart';
 import 'package:diesel_powered/common/widgets/app_text.dart';
 import 'package:diesel_powered/common/widgets/back_button_widget.dart';
-import 'package:diesel_powered/features/quote/domain/models/photo/photo_model.dart';
 import 'package:diesel_powered/features/quote/presentation/providers/get_random_photo_provider.dart';
 import 'package:diesel_powered/features/quote/presentation/providers/get_random_quote_provider.dart';
-import 'package:diesel_powered/features/splash/presentation/splash_view.dart';
-import 'package:diesel_powered/gen/assets.gen.dart';
 import 'package:diesel_powered/util/resources/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -36,7 +33,7 @@ class _QuotesViewState extends ConsumerState<QuotesView> {
             padding: EdgeInsets.symmetric(horizontal: 8.w),
             child: Column(
               children: [
-                BackButtonWidget(title: 'Quotes'),
+                const BackButtonWidget(title: 'Quotes'),
                 20.hb,
                 Expanded(
                   child: SingleChildScrollView(
