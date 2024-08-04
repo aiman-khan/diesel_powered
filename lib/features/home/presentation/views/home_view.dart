@@ -63,6 +63,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
         canPop: false,
         child: Scaffold(
           extendBody: true,
+          backgroundColor: R.colors.white,
           bottomNavigationBar: const AppBottomNavBar(),
           body: Padding(
             padding: EdgeInsets.only(

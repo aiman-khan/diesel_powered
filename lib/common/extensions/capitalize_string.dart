@@ -1,5 +1,7 @@
 extension Capitalize on String {
-  String get capitalize => length > 0
-      ? '${this[0].toUpperCase()}${substring(1).toLowerCase()}'
-      : this;
+  String get capitalize => split(' ')
+      .map((word) => word.isNotEmpty
+          ? '${word[0].toUpperCase()}${word.substring(1).toLowerCase()}'
+          : word)
+      .join(' ');
 }

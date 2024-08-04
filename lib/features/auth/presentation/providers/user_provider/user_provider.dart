@@ -4,10 +4,10 @@ import 'package:diesel_powered/features/auth/presentation/providers/bearer_provi
 import 'package:diesel_powered/util/di/di.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'driver_provider.g.dart';
+part 'user_provider.g.dart';
 
 @riverpod
-Future<UserModel?> driver(DriverRef ref) async {
+Future<UserModel?> user(UserRef ref) async {
   final getUser = sl<CurrentUserUsecase>();
   final bearer = await ref.read(bearerTokenProvider.future);
 
