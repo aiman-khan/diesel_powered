@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:diesel_powered/common/extensions/large_file_checker.dart';
-import 'package:diesel_powered/features/image_picker/domain/data/image_picker_data_source.dart';
-import 'package:diesel_powered/util/exceptions/message_exception.dart';
+import 'package:calculator_flutter_app/common/extensions/large_file_checker.dart';
+import 'package:calculator_flutter_app/features/image_picker/domain/data/image_picker_data_source.dart';
+import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 

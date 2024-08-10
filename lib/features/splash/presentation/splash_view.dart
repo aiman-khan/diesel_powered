@@ -1,7 +1,7 @@
-import 'package:diesel_powered/features/auth/presentation/providers/bearer_provider/bearer_provider.dart';
-import 'package:diesel_powered/gen/assets.gen.dart';
-import 'package:diesel_powered/util/resources/r.dart';
-import 'package:diesel_powered/util/router/paths.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/bearer_provider/bearer_provider.dart';
+import 'package:calculator_flutter_app/gen/assets.gen.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
+import 'package:calculator_flutter_app/util/router/paths.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

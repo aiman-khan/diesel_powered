@@ -1,25 +1,27 @@
 import 'dart:async';
 
-import 'package:diesel_powered/common/extensions/num.dart';
-import 'package:diesel_powered/common/widgets/app_filled_button.dart';
-import 'package:diesel_powered/common/widgets/app_text.dart';
-import 'package:diesel_powered/common/widgets/otp_field_widget.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/auth_step_provider/auth_step_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/otp_form_provider/otp_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/reset_password/initiate_reset_password_verification_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/reset_password/reset_password_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/verify_reset_password_otp_provider/verify_reset_password_otp_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/providers/verify_update_profile_otp_provider/verify_update_profile_otp_provider.dart';
-import 'package:diesel_powered/features/auth/presentation/views/widgets/auth_bg_widget.dart';
-import 'package:diesel_powered/util/exceptions/message_exception.dart';
-import 'package:diesel_powered/util/loading/loading.dart';
-import 'package:diesel_powered/util/resources/r.dart';
-import 'package:diesel_powered/util/router/paths.dart';
-import 'package:diesel_powered/util/toast/toast.dart';
+import 'package:calculator_flutter_app/common/extensions/num.dart';
+import 'package:calculator_flutter_app/common/widgets/app_filled_button.dart';
+import 'package:calculator_flutter_app/common/widgets/app_text.dart';
+import 'package:calculator_flutter_app/common/widgets/back_button_widget.dart';
+import 'package:calculator_flutter_app/common/widgets/otp_field_widget.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/auth_step_provider/auth_step_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/otp_form_provider/otp_form_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/reset_password/initiate_reset_password_verification_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/reset_password/reset_password_form_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/update_profile_provider/update_profile_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/verify_reset_password_otp_provider/verify_reset_password_otp_provider.dart';
+import 'package:calculator_flutter_app/features/auth/presentation/providers/verify_update_profile_otp_provider/verify_update_profile_otp_provider.dart';
+import 'package:calculator_flutter_app/gen/assets.gen.dart';
+import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
+import 'package:calculator_flutter_app/util/loading/loading.dart';
+import 'package:calculator_flutter_app/util/resources/r.dart';
+import 'package:calculator_flutter_app/util/router/paths.dart';
+import 'package:calculator_flutter_app/util/toast/toast.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -143,37 +145,66 @@ class _OTPVerificationViewState extends ConsumerState<OTPVerificationView> {
     ref.watch(otpFormNotifierProvider);
     ref.watch(updateProfileFormProvider);
 
-    return AuthBgWidget(
-      height: 507.h,
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50.w),
-          child: Column(
-            children: [
-              44.hb,
-              AppText(
-                text: 'Verification OTP',
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-                color: R.colors.black,
-              ),
-              7.95.hb,
-              AppText(
-                text: 'Enter 4-digit OTP',
-                fontSize: 15,
-                color: R.colors.black,
-                textAlign: TextAlign.center,
-              ),
-              44.92.hb,
-              OtpWidget(
-                onChanged: (v) {
-                  ref.read(otpFormNotifierProvider.notifier).state = v;
-                },
-              ),
-              16.82.hb,
-              if (_secondsRemaining <= 0)
-                Center(
-                  child: RichText(
+    return KeyboardDismissOnTap(
+      child: Scaffold(
+        backgroundColor: R.colors.white,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                const BackButtonWidget(title: 'Forgot Password'),
+                50.hb,
+                Assets.svgs.appLogo.svg(
+                  width: 165.w,
+                  height: 50.h,
+                ),
+                50.hb,
+                SizedBox(
+                  width: 211.w,
+                  child: AppText(
+                    text:
+                        'Please Enter the 4 Digit Code Send to Your Given Email',
+                    fontSize: 13,
+                    color: R.colors.black,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                24.hb,
+                OtpWidget(
+                  onChanged: (v) {
+                    ref.read(otpFormNotifierProvider.notifier).state = v;
+                  },
+                ),
+                24.hb,
+                if (_secondsRemaining <= 0)
+                  Center(
+                    child: RichText(
+                      text: TextSpan(
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          color: R.colors.black,
+                          fontFamily: 'Urbanist',
+                        ),
+                        children: [
+                          const TextSpan(
+                            text: 'Did not receive a code?',
+                          ),
+                          TextSpan(
+                            text: ' Resend code',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              color: R.colors.primary,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = _resendOtp,
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                else
+                  RichText(
                     text: TextSpan(
                       style: TextStyle(
                         fontSize: 14.sp,
@@ -182,51 +213,27 @@ class _OTPVerificationViewState extends ConsumerState<OTPVerificationView> {
                       ),
                       children: [
                         const TextSpan(
-                          text: 'Did not receive a code?',
+                          text: 'Resend OTP in ',
                         ),
                         TextSpan(
-                          text: ' Resend code',
+                          text: '$_secondsRemaining seconds',
                           style: TextStyle(
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w500,
                             color: R.colors.primary,
                           ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = _resendOtp,
                         ),
                       ],
                     ),
                   ),
-                )
-              else
-                RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      color: R.colors.greyTextField,
-                      fontFamily: 'Urbanist',
-                    ),
-                    children: [
-                      const TextSpan(
-                        text: 'Resend OTP in ',
-                      ),
-                      TextSpan(
-                        text: '$_secondsRemaining seconds',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          color: R.colors.primary,
-                        ),
-                      ),
-                    ],
+                40.hb,
+                Center(
+                  child: AppFilledButton(
+                    text: 'Verify',
+                    onTap: _verifyOtp,
                   ),
                 ),
-              97.hb,
-              Center(
-                child: AppFilledButton(
-                  text: 'Verify',
-                  onTap: _verifyOtp,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
