@@ -1,7 +1,7 @@
-import 'package:calculator_flutter_app/features/auth/domain/usecases/login_driver.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/save_auth.dart';
-import 'package:calculator_flutter_app/features/auth/presentation/providers/login/login_form_provider.dart';
-import 'package:calculator_flutter_app/util/di/di.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/login_driver.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/save_auth.dart';
+import 'package:diesel_powered/features/auth/presentation/providers/login/login_form_provider.dart';
+import 'package:diesel_powered/util/di/di.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_provider.g.dart';
