@@ -1,7 +1,7 @@
-import 'package:calculator_flutter_app/features/auth/domain/repository/auth_repository.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_input.dart';
-import 'package:calculator_flutter_app/infrastructure/usecase_output.dart';
+import 'package:diesel_powered/features/auth/domain/repository/auth_repository.dart';
+import 'package:diesel_powered/infrastructure/usecase.dart';
+import 'package:diesel_powered/infrastructure/usecase_input.dart';
+import 'package:diesel_powered/infrastructure/usecase_output.dart';
 import 'package:injectable/injectable.dart';
 
 class DeleteUserUsecaseInput extends Input {
