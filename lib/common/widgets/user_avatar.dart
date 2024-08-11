@@ -8,11 +8,13 @@ class UserProfileAvatar extends ConsumerWidget {
   const UserProfileAvatar({
     super.key,
     this.size,
+    this.hasBorder = false,
     this.image,
   });
 
   final double? size;
   final String? image;
+  final bool hasBorder;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -21,6 +23,7 @@ class UserProfileAvatar extends ConsumerWidget {
       width: size ?? 72.r,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(66.r),
+        color: hasBorder ? R.colors.primary : R.colors.white,
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(66.r),
@@ -31,7 +34,7 @@ class UserProfileAvatar extends ConsumerWidget {
               )
             : Icon(
                 Icons.person,
-                color: R.colors.primary,
+                color: hasBorder ? R.colors.white : R.colors.primary,
                 size: 36.r,
               ),
       ),
