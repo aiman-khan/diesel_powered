@@ -43,17 +43,16 @@ class _OtpWidgetState extends ConsumerState<OtpWidget> {
     ref.watch(otpFormNotifierProvider);
 
     final defaultPinTheme = PinTheme(
-      width: 71.w,
-      height: 56.h,
+      width: 60.r,
+      height: 60.r,
       textStyle: TextStyle(
-        fontSize: 40.sp,
-        fontWeight: FontWeight.w500,
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w400,
         color: R.colors.black,
       ),
       decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: R.colors.black),
-        ),
+        color: R.colors.greyTextField,
+        borderRadius: BorderRadius.circular(100.r),
       ),
     );
 
@@ -82,10 +81,16 @@ class _OtpWidgetState extends ConsumerState<OtpWidget> {
             ],
           ),
           focusedPinTheme: defaultPinTheme.copyWith(
-            decoration: defaultPinTheme.decoration,
+            decoration: BoxDecoration(
+              border: Border.all(color: R.colors.primary),
+              borderRadius: BorderRadius.circular(100.r),
+            ),
           ),
           submittedPinTheme: defaultPinTheme.copyWith(
-            decoration: defaultPinTheme.decoration,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.r),
+              color: R.colors.primary.withOpacity(0.1),
+            ),
           ),
           errorPinTheme: defaultPinTheme.copyBorderWith(
             border: Border.all(color: Colors.redAccent),

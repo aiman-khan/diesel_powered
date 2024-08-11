@@ -49,7 +49,7 @@ class BackButtonWidget extends StatelessWidget {
                   fontSize: 18.sp,
                 ),
               ),
-            32.wb,
+            icon ?? 32.wb,
           ],
         ),
       ),
