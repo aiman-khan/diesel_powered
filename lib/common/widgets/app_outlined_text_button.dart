@@ -22,19 +22,19 @@ class AppOutlinedTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlinedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(R.colors.white),
-        side: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all(R.colors.white),
+        side: WidgetStateProperty.all(
           BorderSide(
             color: color ?? R.colors.primary,
           ),
         ),
-        minimumSize: MaterialStateProperty.all(
+        minimumSize: WidgetStateProperty.all(
           Size(width?.w ?? 293.w, height?.w ?? 50.h),
         ),
-        maximumSize: MaterialStateProperty.all(
+        maximumSize: WidgetStateProperty.all(
           Size(width?.w ?? 293.w, height?.w ?? 50.h),
         ),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50.r),
           ),

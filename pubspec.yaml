@@ -65,6 +65,10 @@ dependencies:
   google_fonts: ^6.2.1
   geolocator: ^12.0.0
 
+  flutter_auto_localizer:
+    git:
+      url: https://github.com/aiman-khan/flutter_auto_localizer.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
