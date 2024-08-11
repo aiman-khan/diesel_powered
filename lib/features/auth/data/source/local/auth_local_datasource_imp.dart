@@ -1,8 +1,8 @@
-import 'package:calculator_flutter_app/features/auth/domain/data/auth_local_datasource.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/delete_auth.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/get_auth.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/save_auth.dart';
-import 'package:calculator_flutter_app/helpers/persistence/persistence_helper.dart';
+import 'package:diesel_powered/features/auth/domain/data/auth_local_datasource.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/delete_auth.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/get_auth.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/save_auth.dart';
+import 'package:diesel_powered/helpers/persistence/persistence_helper.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
