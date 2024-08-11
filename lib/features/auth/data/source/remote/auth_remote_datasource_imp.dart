@@ -1,14 +1,14 @@
-import 'package:calculator_flutter_app/features/auth/data/entities/user/rest_user.dart';
-import 'package:calculator_flutter_app/features/auth/domain/data/auth_remote_datasource.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/current_user.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/delete_user.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/initiate_reset_password_verification.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/login_driver.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/register_driver.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/reset_password.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/update_profile.dart';
-import 'package:calculator_flutter_app/features/auth/domain/usecases/verify_otp.dart';
-import 'package:calculator_flutter_app/helpers/network_call_helper/network_call_helper.dart';
+import 'package:diesel_powered/features/auth/data/entities/user/rest_user.dart';
+import 'package:diesel_powered/features/auth/domain/data/auth_remote_datasource.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/current_user.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/delete_user.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/initiate_reset_password_verification.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/login_driver.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/register_driver.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/reset_password.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/update_profile.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/verify_otp.dart';
+import 'package:diesel_powered/helpers/network_call_helper/network_call_helper.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
