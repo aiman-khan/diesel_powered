@@ -1,4 +1,4 @@
-import 'package:calculator_flutter_app/features/auth/domain/models/auth_step/auth_step_model.dart';
+import 'package:diesel_powered/features/auth/domain/models/auth_step/auth_step_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'auth_step_provider.g.dart';
