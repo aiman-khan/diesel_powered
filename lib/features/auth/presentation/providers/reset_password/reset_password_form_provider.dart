@@ -1,4 +1,4 @@
-import 'package:calculator_flutter_app/features/auth/domain/models/reset_password_form/reset_password_form.dart';
+import 'package:diesel_powered/features/auth/domain/models/reset_password_form/reset_password_form.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'reset_password_form_provider.g.dart';
