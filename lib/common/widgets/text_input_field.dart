@@ -1,5 +1,6 @@
 import 'package:diesel_powered/common/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextInputField extends StatelessWidget {
   const TextInputField({
@@ -15,6 +16,8 @@ class TextInputField extends StatelessWidget {
     this.maxLines,
     this.minLines,
     this.maxLength,
+    this.radius,
+    this.color,
     super.key,
   });
 
@@ -30,15 +33,24 @@ class TextInputField extends StatelessWidget {
   final int? minLines;
   final int? maxLines;
   final int? maxLength;
+  final double? radius;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
+      radius: radius ?? 47.r,
       labelText: labelText,
       hintText: hintText,
       controller: controller,
       keyboardType: TextInputType.text,
-      validator: validator,
+      validator: validator ??
+          (v) {
+            if (v?.isEmpty ?? true) {
+              return '$hintText is required';
+            }
+            return null;
+          },
       onChanged: onChanged,
       suffixIcon: suffixIcon,
       focusNode: focusNode,
@@ -47,6 +59,7 @@ class TextInputField extends StatelessWidget {
       minLine: minLines ?? 1,
       maxLines: maxLines ?? 1,
       maxLength: maxLength,
+      fillColor: color,
     );
   }
 }
