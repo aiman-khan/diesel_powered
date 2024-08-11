@@ -1,5 +1,5 @@
-import 'package:calculator_flutter_app/features/auth/domain/usecases/delete_auth.dart';
-import 'package:calculator_flutter_app/util/di/di.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/delete_auth.dart';
+import 'package:diesel_powered/util/di/di.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'logout_provider.g.dart';
