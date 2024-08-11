@@ -1,9 +1,9 @@
-import 'package:calculator_flutter_app/features/auth/domain/usecases/update_profile.dart';
-import 'package:calculator_flutter_app/features/auth/presentation/providers/bearer_provider/bearer_provider.dart';
-import 'package:calculator_flutter_app/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
-import 'package:calculator_flutter_app/features/auth/presentation/providers/user_provider/user_provider.dart';
-import 'package:calculator_flutter_app/util/di/di.dart';
-import 'package:calculator_flutter_app/util/exceptions/message_exception.dart';
+import 'package:diesel_powered/features/auth/domain/usecases/update_profile.dart';
+import 'package:diesel_powered/features/auth/presentation/providers/bearer_provider/bearer_provider.dart';
+import 'package:diesel_powered/features/auth/presentation/providers/update_profile_provider/update_profile_form_provider.dart';
+import 'package:diesel_powered/features/auth/presentation/providers/user_provider/user_provider.dart';
+import 'package:diesel_powered/util/di/di.dart';
+import 'package:diesel_powered/util/exceptions/message_exception.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'update_profile_provider.g.dart';
